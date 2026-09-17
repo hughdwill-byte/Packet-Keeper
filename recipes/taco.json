@@ -1,0 +1,217 @@
+{
+  "dishName": "Taco",
+  "product": "Taco Recipe Base",
+  "brand": "Mingle",
+  "cuisine": "Mexican",
+  "serves": "4",
+  "prepTime": "5 mins",
+  "cookTime": "25 mins",
+  "ingredientGroups": [
+    {
+      "title": "Must have",
+      "items": [
+        {
+          "name": "beef mince, chicken mince or lentils",
+          "quantity": "500g",
+          "note": ""
+        },
+        {
+          "name": "onion, diced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "tomato paste",
+          "quantity": "1 tbsp",
+          "note": ""
+        },
+        {
+          "name": "beef stock",
+          "quantity": "100mL",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Extra veg options (choose 1-2)",
+      "items": [
+        {
+          "name": "green capsicum, diced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "carrot, grated",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "zucchini, grated",
+          "quantity": "1",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        {
+          "name": "Rice or tortillas",
+          "quantity": "",
+          "note": ""
+        },
+        {
+          "name": "Cheese, grated",
+          "quantity": "",
+          "note": ""
+        },
+        {
+          "name": "Salad bits",
+          "quantity": "",
+          "note": ""
+        },
+        {
+          "name": "Guacamole",
+          "quantity": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Yummy upgrades",
+      "items": [
+        {
+          "name": "Sour cream with lime juice & coriander mixed through",
+          "quantity": "",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "method": [
+    {
+      "text": "Heat 2 tbsp of oil in a pan over medium heat. Brown your protein at a high heat until lightly browned.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Add onions & cook until translucent. Now add tomato paste & your Mingle recipe base. Cook for 4 mins.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Add in stock & remaining veggies. Simmer over medium heat for 15 mins until the stock has dissolved.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Serve with tortillas or in a bowl with any of your toppings. Mingle's extra spice is killer. Yummo!",
+      "source": "reconstructed"
+    }
+  ],
+  "nutrition": [
+    {
+      "label": "Energy",
+      "perServe": "",
+      "per100g": "1350 kJ"
+    },
+    {
+      "label": "Protein",
+      "perServe": "",
+      "per100g": "13.8 g"
+    }
+  ],
+  "sachetIngredients": [
+    "Garlic",
+    "Paprika",
+    "Onion",
+    "Cumin",
+    "Pink Himalayan Salt",
+    "Tomato Powder",
+    "Coriander",
+    "Parsley Flakes",
+    "Thyme",
+    "Basil",
+    "Chilli"
+  ],
+  "confidence": [
+    {
+      "field": "method",
+      "note": "Right side of the method was cropped; steps completed and marked reconstructed."
+    },
+    {
+      "field": "nutrition",
+      "note": "A thumb covered most of the nutrition panel; only two per-100g values were readable."
+    },
+    {
+      "field": "sachetIngredients",
+      "note": "Sachet ingredient list ran off the right edge; middle items approximate. Note: shares recipe text with Smoky Mexican but a different spice mix."
+    }
+  ],
+  "slug": "taco",
+  "spiceBlend": {
+    "note": "Estimate for the full recipe (serves 4), based on the sachet ingredients in descending order.",
+    "items": [
+      {
+        "name": "paprika",
+        "quantity": "1 tbsp",
+        "note": ""
+      },
+      {
+        "name": "garlic powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "onion powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "ground cumin",
+        "quantity": "1.5 tsp",
+        "note": ""
+      },
+      {
+        "name": "salt",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "tomato powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "ground coriander",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "dried parsley",
+        "quantity": "1/2 tsp",
+        "note": ""
+      },
+      {
+        "name": "dried thyme",
+        "quantity": "1/2 tsp",
+        "note": ""
+      },
+      {
+        "name": "dried basil",
+        "quantity": "1/2 tsp",
+        "note": ""
+      },
+      {
+        "name": "chilli powder",
+        "quantity": "1/2-1 tsp",
+        "note": ""
+      }
+    ],
+    "isEstimate": true
+  },
+  "images": [
+    "recipes/images/taco-1.jpg"
+  ],
+  "dishImage": "recipes/images/taco-dish.svg",
+  "needsReview": true,
+  "createdAt": "2026-09-17T12:18:21.026Z",
+  "updatedAt": "2026-09-17T12:18:21.026Z"
+}

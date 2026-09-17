@@ -1,0 +1,256 @@
+{
+  "dishName": "Sri Lankan Coconut Curry",
+  "product": "Sri Lankan Recipe Base",
+  "brand": "Mingle",
+  "cuisine": "Sri Lankan",
+  "serves": "4",
+  "prepTime": "5 mins",
+  "cookTime": "25 mins",
+  "ingredientGroups": [
+    {
+      "title": "Must have",
+      "items": [
+        {
+          "name": "chicken, prawns or paneer, cut into chunks",
+          "quantity": "500g",
+          "note": ""
+        },
+        {
+          "name": "tomatoes, diced",
+          "quantity": "3",
+          "note": ""
+        },
+        {
+          "name": "onion, diced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "chicken stock",
+          "quantity": "125mL",
+          "note": ""
+        },
+        {
+          "name": "coconut cream",
+          "quantity": "400mL",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Extra veg options (choose 1-2)",
+      "items": [
+        {
+          "name": "zucchini, diced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "cauliflower, chopped",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "eggplant, diced",
+          "quantity": "1",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        {
+          "name": "Rice",
+          "quantity": "",
+          "note": ""
+        },
+        {
+          "name": "Lime",
+          "quantity": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Yummy upgrades",
+      "items": [
+        {
+          "name": "Crispy curry leaves (cook curry leaves in hot oil for 45 seconds)",
+          "quantity": "",
+          "note": ""
+        },
+        {
+          "name": "Crushed peanuts",
+          "quantity": "",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "method": [
+    {
+      "text": "Toast the contents of the recipe base in a dry large pan over a low heat for 1-2 mins until fragrant. Now add 3 tbsp coconut oil.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Add onions & cook until translucent. Then add your tomatoes & protein. Cook for 5 mins.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Stir in coconut cream & chicken stock. Simmer for 5 mins. Add remaining veg & simmer for 15 mins or until desired thickness. Rest 5 mins before serving.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Serve with rice. Top with curry leaves, peanuts & lime. Yummo!",
+      "source": "reconstructed"
+    }
+  ],
+  "nutrition": [
+    {
+      "label": "Energy",
+      "perServe": "95 kJ",
+      "per100g": "1330 kJ"
+    },
+    {
+      "label": "Protein",
+      "perServe": "0.9 g",
+      "per100g": "11.9 g"
+    },
+    {
+      "label": "- gluten",
+      "perServe": "not detected",
+      "per100g": "not detected"
+    },
+    {
+      "label": "Fat, total",
+      "perServe": "0.6 g",
+      "per100g": "7.7 g"
+    },
+    {
+      "label": "- saturated",
+      "perServe": "less than 0.1 g",
+      "per100g": "1.1 g"
+    },
+    {
+      "label": "Carbohydrate",
+      "perServe": "3.2 g",
+      "per100g": "42.4 g"
+    },
+    {
+      "label": "- sugars",
+      "perServe": "0.8 g",
+      "per100g": "11.3 g"
+    },
+    {
+      "label": "Dietary Fibre",
+      "perServe": "1.5 g",
+      "per100g": "20.2 g"
+    },
+    {
+      "label": "Sodium",
+      "perServe": "299 mg",
+      "per100g": "3990 mg"
+    }
+  ],
+  "sachetIngredients": [
+    "Onion",
+    "Garlic",
+    "Paprika",
+    "Coriander",
+    "Australian Sea Salt",
+    "Cumin",
+    "Turmeric",
+    "Fennel Seeds",
+    "Ginger",
+    "Pepper",
+    "Cinnamon",
+    "Jalapeno",
+    "Cardamom Extract"
+  ],
+  "confidence": [
+    {
+      "field": "method",
+      "note": "Right side of the method was cropped; steps completed and marked reconstructed."
+    }
+  ],
+  "slug": "sri-lankan-curry",
+  "spiceBlend": {
+    "note": "Estimate for the full recipe (serves 4), based on the sachet ingredients in descending order.",
+    "items": [
+      {
+        "name": "ground coriander",
+        "quantity": "1 tbsp",
+        "note": ""
+      },
+      {
+        "name": "onion powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "garlic powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "paprika",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "salt",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "ground cumin",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "turmeric",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "ground fennel",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "ground ginger",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "black pepper",
+        "quantity": "1/2 tsp",
+        "note": ""
+      },
+      {
+        "name": "cinnamon",
+        "quantity": "1/2 tsp",
+        "note": ""
+      },
+      {
+        "name": "cayenne (for jalapeno)",
+        "quantity": "1/4 tsp",
+        "note": ""
+      },
+      {
+        "name": "ground cardamom",
+        "quantity": "1/4 tsp",
+        "note": ""
+      }
+    ],
+    "isEstimate": true
+  },
+  "images": [
+    "recipes/images/sri-lankan-curry-1.jpg"
+  ],
+  "dishImage": "recipes/images/sri-lankan-curry-dish.svg",
+  "needsReview": false,
+  "createdAt": "2026-09-17T12:18:21.026Z",
+  "updatedAt": "2026-09-17T12:18:21.026Z"
+}

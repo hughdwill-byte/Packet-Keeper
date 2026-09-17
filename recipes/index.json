@@ -1,5 +1,56 @@
 [
   {
+    "slug": "buffalo-chicken",
+    "dishName": "Buffalo Chicken",
+    "product": "Buffalo Chicken Recipe Base",
+    "cuisine": "American",
+    "dishImage": "recipes/images/buffalo-chicken-dish.svg",
+    "needsReview": true,
+    "ingredientNames": [
+      "chicken, cauliflower or tofu, cut into chunks",
+      "brown onion, diced",
+      "bag of spinach",
+      "spring onions, chopped",
+      "lemon, juiced",
+      "red capsicum, sliced",
+      "chicken stock",
+      "cream cheese",
+      "sour cream",
+      "tomato paste",
+      "grated cheese",
+      "butter",
+      "box of pasta",
+      "zucchini, sliced",
+      "green capsicum, sliced",
+      "Leave out the pasta & shred the chicken to create a Buffalo Chicken Cheese dip that will be perfect for entertaining!"
+    ],
+    "updatedAt": "2026-09-17T12:18:21.026Z"
+  },
+  {
+    "slug": "chilli-con-carne",
+    "dishName": "Chilli Con Carne",
+    "product": "Chilli Con Carne Recipe Base",
+    "cuisine": "Mexican",
+    "dishImage": "recipes/images/chilli-con-carne-dish.svg",
+    "needsReview": true,
+    "ingredientNames": [
+      "beef mince, chicken mince or lentils",
+      "onion, diced",
+      "tin black beans (drained)",
+      "beef stock",
+      "tomato paste",
+      "tin tomatoes",
+      "zucchini, diced",
+      "green capsicum, diced",
+      "Rice or tortillas",
+      "Cheese, grated",
+      "Sour cream",
+      "Lime",
+      "Crushed corn chips"
+    ],
+    "updatedAt": "2026-09-17T12:18:21.026Z"
+  },
+  {
     "slug": "chow-mein",
     "dishName": "Chow Mein",
     "product": "Chow Mein Recipe Base",
@@ -45,6 +96,29 @@
       "Sour cream with lime juice & coriander mixed through"
     ],
     "updatedAt": "2026-09-17T12:03:47.950Z"
+  },
+  {
+    "slug": "satay",
+    "dishName": "Satay Curry",
+    "product": "Satay Recipe Base",
+    "cuisine": "Malaysian",
+    "dishImage": "recipes/images/satay-dish.svg",
+    "needsReview": true,
+    "ingredientNames": [
+      "chicken, beef, pork or tofu, cut into chunks",
+      "onion, diced",
+      "chicken stock",
+      "coconut cream",
+      "peanut butter",
+      "red capsicum, chopped",
+      "head of broccoli, chopped",
+      "zucchini, chopped",
+      "Rice or noodles",
+      "Coriander",
+      "Lime",
+      "Toasted crushed peanuts"
+    ],
+    "updatedAt": "2026-09-17T12:18:21.026Z"
   },
   {
     "slug": "smoky-mexican",
@@ -93,6 +167,29 @@
     "updatedAt": "2026-09-17T12:03:47.950Z"
   },
   {
+    "slug": "sri-lankan-curry",
+    "dishName": "Sri Lankan Coconut Curry",
+    "product": "Sri Lankan Recipe Base",
+    "cuisine": "Sri Lankan",
+    "dishImage": "recipes/images/sri-lankan-curry-dish.svg",
+    "needsReview": false,
+    "ingredientNames": [
+      "chicken, prawns or paneer, cut into chunks",
+      "tomatoes, diced",
+      "onion, diced",
+      "chicken stock",
+      "coconut cream",
+      "zucchini, diced",
+      "cauliflower, chopped",
+      "eggplant, diced",
+      "Rice",
+      "Lime",
+      "Crispy curry leaves (cook curry leaves in hot oil for 45 seconds)",
+      "Crushed peanuts"
+    ],
+    "updatedAt": "2026-09-17T12:18:21.026Z"
+  },
+  {
     "slug": "stroganoff",
     "dishName": "Stroganoff",
     "product": "Stroganoff Recipe Base",
@@ -113,5 +210,28 @@
       "Chives, chopped"
     ],
     "updatedAt": "2026-09-17T12:03:47.950Z"
+  },
+  {
+    "slug": "taco",
+    "dishName": "Taco",
+    "product": "Taco Recipe Base",
+    "cuisine": "Mexican",
+    "dishImage": "recipes/images/taco-dish.svg",
+    "needsReview": true,
+    "ingredientNames": [
+      "beef mince, chicken mince or lentils",
+      "onion, diced",
+      "tomato paste",
+      "beef stock",
+      "green capsicum, diced",
+      "carrot, grated",
+      "zucchini, grated",
+      "Rice or tortillas",
+      "Cheese, grated",
+      "Salad bits",
+      "Guacamole",
+      "Sour cream with lime juice & coriander mixed through"
+    ],
+    "updatedAt": "2026-09-17T12:18:21.026Z"
   }
 ]

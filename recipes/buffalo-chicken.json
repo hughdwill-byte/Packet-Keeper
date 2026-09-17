@@ -1,0 +1,219 @@
+{
+  "dishName": "Buffalo Chicken",
+  "product": "Buffalo Chicken Recipe Base",
+  "brand": "Mingle",
+  "cuisine": "American",
+  "serves": "4",
+  "prepTime": "15 mins",
+  "cookTime": "25 mins",
+  "ingredientGroups": [
+    {
+      "title": "Must have",
+      "items": [
+        {
+          "name": "chicken, cauliflower or tofu, cut into chunks",
+          "quantity": "500g",
+          "note": ""
+        },
+        {
+          "name": "brown onion, diced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "bag of spinach",
+          "quantity": "200g",
+          "note": ""
+        },
+        {
+          "name": "spring onions, chopped",
+          "quantity": "3",
+          "note": ""
+        },
+        {
+          "name": "lemon, juiced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "red capsicum, sliced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "chicken stock",
+          "quantity": "150mL",
+          "note": ""
+        },
+        {
+          "name": "cream cheese",
+          "quantity": "200g",
+          "note": ""
+        },
+        {
+          "name": "sour cream",
+          "quantity": "200g",
+          "note": ""
+        },
+        {
+          "name": "tomato paste",
+          "quantity": "1 tbsp",
+          "note": ""
+        },
+        {
+          "name": "grated cheese",
+          "quantity": "150g",
+          "note": ""
+        },
+        {
+          "name": "butter",
+          "quantity": "50g",
+          "note": ""
+        },
+        {
+          "name": "box of pasta",
+          "quantity": "500g",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Extra veg options (choose 1-2)",
+      "items": [
+        {
+          "name": "zucchini, sliced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "green capsicum, sliced",
+          "quantity": "1",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Bonus tip",
+      "items": [
+        {
+          "name": "Leave out the pasta & shred the chicken to create a Buffalo Chicken Cheese dip that will be perfect for entertaining!",
+          "quantity": "",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "method": [
+    {
+      "text": "Preheat oven to 180°C. Now heat butter in a pot over medium heat. Add butter, tomato paste & Mingle recipe base. Cook for 3 mins. Meanwhile, cook your pasta for 2 mins less than the instructions.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Add protein to the remaining pot, cook until browned. Add sour cream, cream cheese, lemon juice, stock & remaining veggies (exclude spinach). Cook until cheese melts.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Transfer pasta & sauce to a baking tray. Top with spring onion & cheese, then bake until golden.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Serve with a wedge of lemon. Yummo!",
+      "source": "reconstructed"
+    }
+  ],
+  "nutrition": [
+    {
+      "label": "Energy",
+      "perServe": "106 kJ",
+      "per100g": "1210 kJ"
+    },
+    {
+      "label": "Protein",
+      "perServe": "0.9 g",
+      "per100g": "10.7 g"
+    },
+    {
+      "label": "- gluten",
+      "perServe": "not detected",
+      "per100g": "not detected"
+    },
+    {
+      "label": "Fat, total",
+      "perServe": "0.4 g",
+      "per100g": "3.5 g"
+    },
+    {
+      "label": "- saturated",
+      "perServe": "less than 0.1 g",
+      "per100g": "0.6 g"
+    }
+  ],
+  "sachetIngredients": [
+    "Onion",
+    "Garlic",
+    "Paprika",
+    "Australian Sea Salt",
+    "Vitamin C",
+    "Cayenne",
+    "Lime Powder",
+    "Olive Oil"
+  ],
+  "confidence": [
+    {
+      "field": "method",
+      "note": "Right side of the method was cropped; steps completed and marked reconstructed."
+    },
+    {
+      "field": "nutrition",
+      "note": "A thumb covered the lower nutrition rows; only the top rows were readable."
+    },
+    {
+      "field": "sachetIngredients",
+      "note": "Sachet ingredient list ran off the right edge; some items approximate."
+    }
+  ],
+  "slug": "buffalo-chicken",
+  "spiceBlend": {
+    "note": "Estimate for the full recipe (serves 4). Buffalo heat comes mostly from cayenne plus the creamy/tangy base.",
+    "items": [
+      {
+        "name": "paprika",
+        "quantity": "1 tbsp",
+        "note": ""
+      },
+      {
+        "name": "onion powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "garlic powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "cayenne pepper",
+        "quantity": "1-2 tsp",
+        "note": ""
+      },
+      {
+        "name": "salt",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "lime zest",
+        "quantity": "1/2 tsp",
+        "note": ""
+      }
+    ],
+    "isEstimate": true
+  },
+  "images": [
+    "recipes/images/buffalo-chicken-1.jpg"
+  ],
+  "dishImage": "recipes/images/buffalo-chicken-dish.svg",
+  "needsReview": true,
+  "createdAt": "2026-09-17T12:18:21.026Z",
+  "updatedAt": "2026-09-17T12:18:21.026Z"
+}

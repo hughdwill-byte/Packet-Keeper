@@ -1,0 +1,258 @@
+{
+  "dishName": "Chilli Con Carne",
+  "product": "Chilli Con Carne Recipe Base",
+  "brand": "Mingle",
+  "cuisine": "Mexican",
+  "serves": "4",
+  "prepTime": "5 mins",
+  "cookTime": "25 mins",
+  "ingredientGroups": [
+    {
+      "title": "Must have",
+      "items": [
+        {
+          "name": "beef mince, chicken mince or lentils",
+          "quantity": "500g",
+          "note": ""
+        },
+        {
+          "name": "onion, diced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "tin black beans (drained)",
+          "quantity": "400g",
+          "note": ""
+        },
+        {
+          "name": "beef stock",
+          "quantity": "250mL",
+          "note": ""
+        },
+        {
+          "name": "tomato paste",
+          "quantity": "2 tbsp",
+          "note": ""
+        },
+        {
+          "name": "tin tomatoes",
+          "quantity": "400g",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Extra veg options (choose 1-2)",
+      "items": [
+        {
+          "name": "zucchini, diced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "green capsicum, diced",
+          "quantity": "1",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        {
+          "name": "Rice or tortillas",
+          "quantity": "",
+          "note": ""
+        },
+        {
+          "name": "Cheese, grated",
+          "quantity": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Yummy upgrades",
+      "items": [
+        {
+          "name": "Sour cream",
+          "quantity": "",
+          "note": ""
+        },
+        {
+          "name": "Lime",
+          "quantity": "",
+          "note": ""
+        },
+        {
+          "name": "Crushed corn chips",
+          "quantity": "",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "method": [
+    {
+      "text": "Heat 2 tbsp of oil in a pot over medium heat. Add onion & cook until translucent.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Add protein & cook until browned. Now stir in tomato paste & Mingle's recipe base & cook for 1-2 mins. Add remaining veg including black beans.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Add in stock, tinned tomatoes & simmer for 25 mins stirring occasionally. Leave covered off the heat for 10 mins to cool - this will make it taste better.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Serve with rice topped with crushed corn chips, a dollop of sour cream, a squeeze of lime & some grated cheese. Yummo!",
+      "source": "reconstructed"
+    }
+  ],
+  "nutrition": [
+    {
+      "label": "Energy",
+      "perServe": "109 kJ",
+      "per100g": "1250 kJ"
+    },
+    {
+      "label": "Protein",
+      "perServe": "1.0 g",
+      "per100g": "11.8 g"
+    },
+    {
+      "label": "- gluten",
+      "perServe": "not detected",
+      "per100g": "not detected"
+    },
+    {
+      "label": "Fat, total",
+      "perServe": "0.5 g",
+      "per100g": "6.1 g"
+    },
+    {
+      "label": "- saturated",
+      "perServe": "less than 0.1 g",
+      "per100g": "1.1 g"
+    },
+    {
+      "label": "Carbohydrate",
+      "perServe": "4.1 g",
+      "per100g": "47.3 g"
+    },
+    {
+      "label": "- sugars",
+      "perServe": "1.1 g",
+      "per100g": "12.4 g"
+    },
+    {
+      "label": "Dietary Fibre",
+      "perServe": "1.5 g",
+      "per100g": "17.7 g"
+    },
+    {
+      "label": "Sodium",
+      "perServe": "",
+      "per100g": "3970 mg"
+    }
+  ],
+  "sachetIngredients": [
+    "Onion",
+    "Garlic",
+    "Paprika",
+    "Australian Sea Salt",
+    "Cumin",
+    "Cinnamon",
+    "Cacao Powder",
+    "Marjoram",
+    "Ginger",
+    "Allspice",
+    "Chipotle",
+    "Olive Oil"
+  ],
+  "confidence": [
+    {
+      "field": "method",
+      "note": "Right side of the method was cropped; steps completed and marked reconstructed."
+    },
+    {
+      "field": "nutrition",
+      "note": "A thumb covered the per-serve Sodium value."
+    },
+    {
+      "field": "sachetIngredients",
+      "note": "Sachet ingredient list ran off the right edge; some items approximate."
+    }
+  ],
+  "slug": "chilli-con-carne",
+  "spiceBlend": {
+    "note": "Estimate for the full recipe (serves 4), based on the sachet ingredients in descending order. Cacao & cinnamon give it depth.",
+    "items": [
+      {
+        "name": "paprika",
+        "quantity": "1 tbsp",
+        "note": ""
+      },
+      {
+        "name": "onion powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "garlic powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "ground cumin",
+        "quantity": "1.5 tsp",
+        "note": ""
+      },
+      {
+        "name": "salt",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "chipotle powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "cacao powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "cinnamon",
+        "quantity": "1/2 tsp",
+        "note": ""
+      },
+      {
+        "name": "dried marjoram",
+        "quantity": "1/2 tsp",
+        "note": ""
+      },
+      {
+        "name": "ground ginger",
+        "quantity": "1/2 tsp",
+        "note": ""
+      },
+      {
+        "name": "allspice",
+        "quantity": "1/4 tsp",
+        "note": ""
+      }
+    ],
+    "isEstimate": true
+  },
+  "images": [
+    "recipes/images/chilli-con-carne-1.jpg"
+  ],
+  "dishImage": "recipes/images/chilli-con-carne-dish.svg",
+  "needsReview": true,
+  "createdAt": "2026-09-17T12:18:21.026Z",
+  "updatedAt": "2026-09-17T12:18:21.026Z"
+}

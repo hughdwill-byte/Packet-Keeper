@@ -1,0 +1,221 @@
+{
+  "dishName": "Satay Curry",
+  "product": "Satay Recipe Base",
+  "brand": "Mingle",
+  "cuisine": "Malaysian",
+  "serves": "4",
+  "prepTime": "5 mins",
+  "cookTime": "25 mins",
+  "ingredientGroups": [
+    {
+      "title": "Must have",
+      "items": [
+        {
+          "name": "chicken, beef, pork or tofu, cut into chunks",
+          "quantity": "500g",
+          "note": ""
+        },
+        {
+          "name": "onion, diced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "chicken stock",
+          "quantity": "200mL",
+          "note": ""
+        },
+        {
+          "name": "coconut cream",
+          "quantity": "250mL",
+          "note": ""
+        },
+        {
+          "name": "peanut butter",
+          "quantity": "5 tbsp",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Extra veg options (choose 1-2)",
+      "items": [
+        {
+          "name": "red capsicum, chopped",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "head of broccoli, chopped",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "zucchini, chopped",
+          "quantity": "1",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        {
+          "name": "Rice or noodles",
+          "quantity": "",
+          "note": ""
+        },
+        {
+          "name": "Coriander",
+          "quantity": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Yummy upgrades",
+      "items": [
+        {
+          "name": "Lime",
+          "quantity": "",
+          "note": ""
+        },
+        {
+          "name": "Toasted crushed peanuts",
+          "quantity": "",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "method": [
+    {
+      "text": "Heat 2 tbsp of coconut oil or ghee in a large pot over medium heat. Add onion & cook for 3 mins.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Add in Mingle's recipe base & protein, cooking until lightly browned. Add remaining veg. Cook for 2 mins.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Stir in the peanut butter, coconut cream & stock. Cover the pot & lower the heat to simmer for 20 mins.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Serve with rice or noodles. Top with crushed peanuts & a squeeze of fresh lime. Yummo!",
+      "source": "reconstructed"
+    }
+  ],
+  "nutrition": [
+    {
+      "label": "Energy",
+      "perServe": "100 kJ",
+      "per100g": "1330 kJ"
+    },
+    {
+      "label": "Protein",
+      "perServe": "0.9 g",
+      "per100g": "12.5 g"
+    },
+    {
+      "label": "- gluten",
+      "perServe": "not detected",
+      "per100g": "not detected"
+    },
+    {
+      "label": "Fat, total",
+      "perServe": "",
+      "per100g": "12.9 g"
+    }
+  ],
+  "sachetIngredients": [
+    "Coriander",
+    "Fennel",
+    "Pepper",
+    "Cumin",
+    "Turmeric",
+    "Ginger",
+    "Pink Himalayan Salt",
+    "Paprika",
+    "Cardamom",
+    "Nutmeg"
+  ],
+  "confidence": [
+    {
+      "field": "method",
+      "note": "Right side of the method was cropped; steps completed and marked reconstructed."
+    },
+    {
+      "field": "nutrition",
+      "note": "A thumb covered the lower nutrition rows; only the top rows were readable."
+    },
+    {
+      "field": "sachetIngredients",
+      "note": "Sachet ingredient list ran off the right edge; last items approximate."
+    }
+  ],
+  "slug": "satay",
+  "spiceBlend": {
+    "note": "Estimate for the full recipe (serves 4), based on the sachet ingredients in descending order. The satay body comes from the peanut butter + coconut cream.",
+    "items": [
+      {
+        "name": "ground coriander",
+        "quantity": "1 tbsp",
+        "note": ""
+      },
+      {
+        "name": "ground fennel",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "black pepper",
+        "quantity": "1/2 tsp",
+        "note": ""
+      },
+      {
+        "name": "ground cumin",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "turmeric",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "ground ginger",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "salt",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "paprika",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "ground cardamom",
+        "quantity": "1/4 tsp",
+        "note": ""
+      },
+      {
+        "name": "nutmeg",
+        "quantity": "1/4 tsp",
+        "note": ""
+      }
+    ],
+    "isEstimate": true
+  },
+  "images": [
+    "recipes/images/satay-1.jpg"
+  ],
+  "dishImage": "recipes/images/satay-dish.svg",
+  "needsReview": true,
+  "createdAt": "2026-09-17T12:18:21.026Z",
+  "updatedAt": "2026-09-17T12:18:21.026Z"
+}
