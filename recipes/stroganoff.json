@@ -1,0 +1,213 @@
+{
+  "dishName": "Stroganoff",
+  "product": "Stroganoff Recipe Base",
+  "brand": "Mingle",
+  "cuisine": "Hungarian",
+  "serves": "4",
+  "prepTime": "5 mins",
+  "cookTime": "25 mins",
+  "ingredientGroups": [
+    {
+      "title": "Must have",
+      "items": [
+        {
+          "name": "beef, chicken or tofu strips",
+          "quantity": "500g",
+          "note": ""
+        },
+        {
+          "name": "onion, diced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "mushrooms, sliced",
+          "quantity": "150g",
+          "note": ""
+        },
+        {
+          "name": "bag of spinach",
+          "quantity": "200g",
+          "note": ""
+        },
+        {
+          "name": "sour cream",
+          "quantity": "4 tbsp",
+          "note": ""
+        },
+        {
+          "name": "chicken stock",
+          "quantity": "300mL",
+          "note": ""
+        },
+        {
+          "name": "tomato paste",
+          "quantity": "2 tbsp",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Extra veg options (choose 1-2)",
+      "items": [
+        {
+          "name": "zucchini, cubed",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "green capsicum, cubed",
+          "quantity": "1",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        {
+          "name": "Egg noodles or bow tie pasta",
+          "quantity": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Yummy upgrades",
+      "items": [
+        {
+          "name": "Chives, chopped",
+          "quantity": "",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "method": [
+    {
+      "text": "Heat 2 tbsp of olive oil in a pot over medium heat. Add protein & tomato paste and cook for 3 mins.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Mix in mushrooms until softened. Add Mingle recipe base & remaining veg.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Add in the stock & lower the heat to simmer for 20 mins. Add spinach & sour cream and let wilt with the heat off.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Serve with your pasta & chives. Yummo!",
+      "source": "reconstructed"
+    }
+  ],
+  "nutrition": [
+    {
+      "label": "Energy",
+      "perServe": "95 kJ",
+      "per100g": "1260 kJ"
+    },
+    {
+      "label": "Protein",
+      "perServe": "1.0 g",
+      "per100g": "12.7 g"
+    },
+    {
+      "label": "- gluten",
+      "perServe": "not detected",
+      "per100g": "not detected"
+    },
+    {
+      "label": "Fat, total",
+      "perServe": "0.3 g",
+      "per100g": "3.4 g"
+    },
+    {
+      "label": "- saturated",
+      "perServe": "less than 0.1 g",
+      "per100g": "0.7 g"
+    },
+    {
+      "label": "Carbohydrate",
+      "perServe": "4.1 g",
+      "per100g": "54.8 g"
+    },
+    {
+      "label": "- sugars",
+      "perServe": "1.4 g",
+      "per100g": "15.6 g"
+    },
+    {
+      "label": "Dietary Fibre",
+      "perServe": "1.3 g",
+      "per100g": "16.8 g"
+    },
+    {
+      "label": "Sodium",
+      "perServe": "193 mg",
+      "per100g": "2580 mg"
+    }
+  ],
+  "sachetIngredients": [
+    "Onion",
+    "Garlic",
+    "Paprika",
+    "Pink Himalayan Salt",
+    "Pepper",
+    "Parsley"
+  ],
+  "confidence": [
+    {
+      "field": "method",
+      "note": "Right side of the method was cropped; steps completed and marked reconstructed."
+    },
+    {
+      "field": "sachetIngredients",
+      "note": "Sachet ingredient list ran off the right edge; middle items may be missing."
+    }
+  ],
+  "slug": "stroganoff",
+  "spiceBlend": {
+    "note": "Estimate for the full recipe (serves 4), based on the sachet ingredients in descending order.",
+    "items": [
+      {
+        "name": "onion powder",
+        "quantity": "1.5 tsp",
+        "note": ""
+      },
+      {
+        "name": "garlic powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "paprika",
+        "quantity": "1 tbsp",
+        "note": ""
+      },
+      {
+        "name": "salt",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "black pepper",
+        "quantity": "1/2 tsp",
+        "note": ""
+      },
+      {
+        "name": "dried parsley",
+        "quantity": "1 tsp",
+        "note": ""
+      }
+    ],
+    "isEstimate": true
+  },
+  "images": [
+    "recipes/images/stroganoff-1.jpg"
+  ],
+  "dishImage": "recipes/images/stroganoff-dish.svg",
+  "needsReview": false,
+  "createdAt": "2026-09-17T12:03:47.950Z",
+  "updatedAt": "2026-09-17T12:03:47.950Z"
+}

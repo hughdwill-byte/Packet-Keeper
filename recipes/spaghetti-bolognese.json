@@ -1,0 +1,237 @@
+{
+  "dishName": "Spaghetti Bolognese",
+  "product": "Spaghetti Bolognese Recipe Base",
+  "brand": "Mingle",
+  "cuisine": "Italian",
+  "serves": "4",
+  "prepTime": "5 mins",
+  "cookTime": "25 mins",
+  "ingredientGroups": [
+    {
+      "title": "Must have",
+      "items": [
+        {
+          "name": "beef, chicken or plant based mince alternatives (lentils work well)",
+          "quantity": "500g",
+          "note": ""
+        },
+        {
+          "name": "onion, diced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "garlic clove, minced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "tomato paste",
+          "quantity": "2 tbsp",
+          "note": ""
+        },
+        {
+          "name": "passata",
+          "quantity": "200mL",
+          "note": ""
+        },
+        {
+          "name": "tin tomatoes",
+          "quantity": "400g",
+          "note": ""
+        },
+        {
+          "name": "beef stock",
+          "quantity": "250mL",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Extra veg options (choose 1-2)",
+      "items": [
+        {
+          "name": "carrot, diced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "zucchini, grated",
+          "quantity": "1",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        {
+          "name": "Spaghetti or zoodles",
+          "quantity": "",
+          "note": ""
+        },
+        {
+          "name": "Parmesan, grated",
+          "quantity": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Yummy upgrades",
+      "items": [
+        {
+          "name": "milk - see step 3",
+          "quantity": "150mL",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "method": [
+    {
+      "text": "Heat 2 tbsp of oil in a large pot over medium heat. Add onion, garlic & tomato paste. Cook for 3 mins.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Add protein & Mingle recipe base, cooking until browned. Add remaining veggies. Cook for 2 mins.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Add passata, tin of tomatoes & stock. Cover the pot & lower heat to simmer for 20 mins. Optional: to elevate your dish even further, add 150mL milk & cook for an additional 10 mins.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Serve with zucchini noodles or pasta. Top with some parmesan cheese. Yummo!",
+      "source": "reconstructed"
+    }
+  ],
+  "nutrition": [
+    {
+      "label": "Energy",
+      "perServe": "98 kJ",
+      "per100g": "1310 kJ"
+    },
+    {
+      "label": "Protein",
+      "perServe": "0.9 g",
+      "per100g": "12.0 g"
+    },
+    {
+      "label": "- gluten",
+      "perServe": "not detected",
+      "per100g": "not detected"
+    },
+    {
+      "label": "Fat, total",
+      "perServe": "0.3 g",
+      "per100g": "4.6 g"
+    },
+    {
+      "label": "- saturated",
+      "perServe": "less than 0.1 g",
+      "per100g": "0.9 g"
+    },
+    {
+      "label": "Carbohydrate",
+      "perServe": "4.1 g",
+      "per100g": "54.7 g"
+    },
+    {
+      "label": "- sugars",
+      "perServe": "0.3 g",
+      "per100g": "19.2 g"
+    },
+    {
+      "label": "Dietary Fibre",
+      "perServe": "1.4 g",
+      "per100g": "4.3 g"
+    },
+    {
+      "label": "Sodium",
+      "perServe": "139 mg",
+      "per100g": "1850 mg"
+    }
+  ],
+  "sachetIngredients": [
+    "Garlic",
+    "Onion",
+    "Red Bell Pepper",
+    "Thyme",
+    "Marjoram",
+    "Pink Himalayan Salt",
+    "Basil",
+    "Black Pepper",
+    "Parsley",
+    "Olive Oil"
+  ],
+  "confidence": [
+    {
+      "field": "method",
+      "note": "Right side of the method was cropped; steps completed and marked reconstructed."
+    },
+    {
+      "field": "sachetIngredients",
+      "note": "Sachet ingredient list ran off the right edge; some items approximate."
+    }
+  ],
+  "slug": "spaghetti-bolognese",
+  "spiceBlend": {
+    "note": "Estimate for the full recipe (serves 4), based on the sachet ingredients in descending order.",
+    "items": [
+      {
+        "name": "garlic powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "onion powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "paprika (for red bell pepper)",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "dried thyme",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "dried marjoram",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "salt",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "dried basil",
+        "quantity": "1 tbsp",
+        "note": ""
+      },
+      {
+        "name": "black pepper",
+        "quantity": "1/2 tsp",
+        "note": ""
+      },
+      {
+        "name": "dried parsley",
+        "quantity": "1 tsp",
+        "note": ""
+      }
+    ],
+    "isEstimate": true
+  },
+  "images": [
+    "recipes/images/spaghetti-bolognese-1.jpg"
+  ],
+  "dishImage": "recipes/images/spaghetti-bolognese-dish.svg",
+  "needsReview": false,
+  "createdAt": "2026-09-17T12:03:47.950Z",
+  "updatedAt": "2026-09-17T12:03:47.950Z"
+}

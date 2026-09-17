@@ -1,1 +1,117 @@
-[]
+[
+  {
+    "slug": "chow-mein",
+    "dishName": "Chow Mein",
+    "product": "Chow Mein Recipe Base",
+    "cuisine": "Chinese",
+    "dishImage": "recipes/images/chow-mein-dish.svg",
+    "needsReview": true,
+    "ingredientNames": [
+      "beef mince, pork mince or tofu",
+      "cabbage, shredded",
+      "carrot, sliced",
+      "rice",
+      "chicken stock",
+      "sesame oil",
+      "capsicum, sliced",
+      "zucchini, cubed",
+      "spring onions, sliced",
+      "Crushed peanuts",
+      "Fresh coriander (if you're not a hater)"
+    ],
+    "updatedAt": "2026-09-17T12:03:47.950Z"
+  },
+  {
+    "slug": "fajita",
+    "dishName": "Fajita",
+    "product": "Fajita Recipe Base",
+    "cuisine": "Mexican",
+    "dishImage": "recipes/images/fajita-dish.svg",
+    "needsReview": true,
+    "ingredientNames": [
+      "beef, chicken or tofu, sliced thinly",
+      "onion, diced",
+      "green capsicum, sliced",
+      "red capsicum, sliced",
+      "beef stock",
+      "tomato paste",
+      "zucchini, sliced",
+      "carrot, grated",
+      "tin of black beans",
+      "Rice or tortillas",
+      "Cheese, grated",
+      "Salad bits",
+      "Guacamole",
+      "Sour cream with lime juice & coriander mixed through"
+    ],
+    "updatedAt": "2026-09-17T12:03:47.950Z"
+  },
+  {
+    "slug": "smoky-mexican",
+    "dishName": "Smoky Mexican",
+    "product": "Smoky Mexican Recipe Base",
+    "cuisine": "Mexican",
+    "dishImage": "recipes/images/smoky-mexican-dish.svg",
+    "needsReview": false,
+    "ingredientNames": [
+      "beef mince, chicken mince or lentils",
+      "onion, diced",
+      "tomato paste",
+      "beef stock",
+      "green capsicum, diced",
+      "carrot, grated",
+      "zucchini, grated",
+      "Rice or tortillas",
+      "Cheese, grated",
+      "Salad bits",
+      "Guacamole",
+      "Sour cream with lime juice & coriander mixed through"
+    ],
+    "updatedAt": "2026-09-17T12:03:47.950Z"
+  },
+  {
+    "slug": "spaghetti-bolognese",
+    "dishName": "Spaghetti Bolognese",
+    "product": "Spaghetti Bolognese Recipe Base",
+    "cuisine": "Italian",
+    "dishImage": "recipes/images/spaghetti-bolognese-dish.svg",
+    "needsReview": false,
+    "ingredientNames": [
+      "beef, chicken or plant based mince alternatives (lentils work well)",
+      "onion, diced",
+      "garlic clove, minced",
+      "tomato paste",
+      "passata",
+      "tin tomatoes",
+      "beef stock",
+      "carrot, diced",
+      "zucchini, grated",
+      "Spaghetti or zoodles",
+      "Parmesan, grated",
+      "milk - see step 3"
+    ],
+    "updatedAt": "2026-09-17T12:03:47.950Z"
+  },
+  {
+    "slug": "stroganoff",
+    "dishName": "Stroganoff",
+    "product": "Stroganoff Recipe Base",
+    "cuisine": "Hungarian",
+    "dishImage": "recipes/images/stroganoff-dish.svg",
+    "needsReview": false,
+    "ingredientNames": [
+      "beef, chicken or tofu strips",
+      "onion, diced",
+      "mushrooms, sliced",
+      "bag of spinach",
+      "sour cream",
+      "chicken stock",
+      "tomato paste",
+      "zucchini, cubed",
+      "green capsicum, cubed",
+      "Egg noodles or bow tie pasta",
+      "Chives, chopped"
+    ],
+    "updatedAt": "2026-09-17T12:03:47.950Z"
+  }
+]

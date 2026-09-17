@@ -1,0 +1,211 @@
+{
+  "dishName": "Chow Mein",
+  "product": "Chow Mein Recipe Base",
+  "brand": "Mingle",
+  "cuisine": "Chinese",
+  "serves": "4",
+  "prepTime": "5 mins",
+  "cookTime": "25 mins",
+  "ingredientGroups": [
+    {
+      "title": "Must have",
+      "items": [
+        {
+          "name": "beef mince, pork mince or tofu",
+          "quantity": "500g",
+          "note": ""
+        },
+        {
+          "name": "cabbage, shredded",
+          "quantity": "4 cups",
+          "note": ""
+        },
+        {
+          "name": "carrot, sliced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "rice",
+          "quantity": "1/2 cup",
+          "note": ""
+        },
+        {
+          "name": "chicken stock",
+          "quantity": "500mL",
+          "note": ""
+        },
+        {
+          "name": "sesame oil",
+          "quantity": "2 tbsp",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Extra veg options (choose 1-2)",
+      "items": [
+        {
+          "name": "capsicum, sliced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "zucchini, cubed",
+          "quantity": "1",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        {
+          "name": "spring onions, sliced",
+          "quantity": "2",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Yummy upgrades",
+      "items": [
+        {
+          "name": "Crushed peanuts",
+          "quantity": "",
+          "note": ""
+        },
+        {
+          "name": "Fresh coriander (if you're not a hater)",
+          "quantity": "",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "method": [
+    {
+      "text": "Prepare by separating a portion (10g) of Mingle's sachet. Set aside for use at the end of the recipe. Now heat 2 tbsp sesame oil in a pan. Add protein for approx 5 mins.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Add all veg (minus the spring onions), cook for 2 mins. Add the Mingle recipe base, rice & stock. Cook over low heat until rice is cooked, approx 25 mins. Stir occasionally.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Take off heat & stir in the set-aside Mingle sachet & let it rest for a minute.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Serve with chopped spring onions & crushed peanuts. Yummo!",
+      "source": "reconstructed"
+    }
+  ],
+  "nutrition": [
+    {
+      "label": "Energy",
+      "perServe": "143 kJ",
+      "per100g": "1430 kJ"
+    },
+    {
+      "label": "Protein",
+      "perServe": "1.2 g",
+      "per100g": "12.2 g"
+    },
+    {
+      "label": "- gluten",
+      "perServe": "not detected",
+      "per100g": "not detected"
+    },
+    {
+      "label": "Fat, total",
+      "perServe": "0.7 g",
+      "per100g": "7.3 g"
+    }
+  ],
+  "sachetIngredients": [
+    "Onion",
+    "Garlic",
+    "Sesame Seeds",
+    "Salt",
+    "Soy Sauce Powder",
+    "Chinese Five Spice",
+    "Ginger",
+    "Mushroom",
+    "Olive Oil",
+    "Natural Sweetener (Monk Fruit)"
+  ],
+  "confidence": [
+    {
+      "field": "method",
+      "note": "Right side of the method was cropped; steps completed and marked reconstructed."
+    },
+    {
+      "field": "nutrition",
+      "note": "A thumb covered the lower nutrition rows; only the top rows were readable."
+    },
+    {
+      "field": "sachetIngredients",
+      "note": "Sachet ingredient list ran off the right edge. Contains: Sesame, Soy."
+    }
+  ],
+  "slug": "chow-mein",
+  "spiceBlend": {
+    "note": "Estimate for the full recipe (serves 4), based on the sachet ingredients in descending order.",
+    "items": [
+      {
+        "name": "onion powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "garlic powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "sesame seeds",
+        "quantity": "1 tbsp",
+        "note": ""
+      },
+      {
+        "name": "salt",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "soy sauce",
+        "quantity": "2 tbsp",
+        "note": "stands in for soy sauce powder"
+      },
+      {
+        "name": "Chinese five spice",
+        "quantity": "1/2 tsp",
+        "note": ""
+      },
+      {
+        "name": "ground ginger",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "mushroom powder",
+        "quantity": "1 tsp",
+        "note": "optional"
+      },
+      {
+        "name": "sugar (or monk fruit)",
+        "quantity": "1/2 tsp",
+        "note": ""
+      }
+    ],
+    "isEstimate": true
+  },
+  "images": [
+    "recipes/images/chow-mein-1.jpg"
+  ],
+  "dishImage": "recipes/images/chow-mein-dish.svg",
+  "needsReview": true,
+  "createdAt": "2026-09-17T12:03:47.950Z",
+  "updatedAt": "2026-09-17T12:03:47.950Z"
+}
