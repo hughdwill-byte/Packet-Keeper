@@ -1,0 +1,252 @@
+{
+  "dishName": "Butter Chicken",
+  "product": "Butter Chicken Recipe Base",
+  "brand": "Mingle",
+  "cuisine": "Indian",
+  "serves": "4",
+  "prepTime": "5 mins",
+  "cookTime": "25 mins",
+  "ingredientGroups": [
+    {
+      "title": "Must have",
+      "items": [
+        {
+          "name": "chicken, paneer or tofu, cut into chunks",
+          "quantity": "500g",
+          "note": ""
+        },
+        {
+          "name": "onion, diced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "pumpkin, diced",
+          "quantity": "1/4",
+          "note": ""
+        },
+        {
+          "name": "carrot, diced",
+          "quantity": "1",
+          "note": ""
+        },
+        {
+          "name": "tomato passata",
+          "quantity": "400mL",
+          "note": ""
+        },
+        {
+          "name": "cream",
+          "quantity": "300mL",
+          "note": "for vegans: 400mL coconut cream"
+        },
+        {
+          "name": "chicken stock",
+          "quantity": "200mL",
+          "note": ""
+        },
+        {
+          "name": "butter",
+          "quantity": "2-3 tbsp (50g)",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Extra veg options (choose 1-2)",
+      "items": [
+        {
+          "name": "cauliflower, chopped",
+          "quantity": "1/4",
+          "note": ""
+        },
+        {
+          "name": "zucchini, diced",
+          "quantity": "1",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        {
+          "name": "Rice",
+          "quantity": "",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "Yummy upgrades",
+      "items": [
+        {
+          "name": "Yoghurt",
+          "quantity": "",
+          "note": ""
+        },
+        {
+          "name": "Roasted crushed cashews",
+          "quantity": "",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "method": [
+    {
+      "text": "Heat 2 tbsp of oil in a large pot over medium heat. Add onion & cook until translucent.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Add protein & Mingle recipe base, cooking until lightly browned. Add remaining veg & cook for an additional 2 mins.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Add in tomato passata, butter, cream & stock. Cover the pot & lower the heat to simmer for 20 mins.",
+      "source": "reconstructed"
+    },
+    {
+      "text": "Serve with rice, crushed cashews & a dollop of yoghurt. Yummo!",
+      "source": "reconstructed"
+    }
+  ],
+  "nutrition": [
+    {
+      "label": "Energy",
+      "perServe": "95 kJ",
+      "per100g": "1260 kJ"
+    },
+    {
+      "label": "Protein",
+      "perServe": "0.8 g",
+      "per100g": "10.7 g"
+    },
+    {
+      "label": "- gluten",
+      "perServe": "not detected",
+      "per100g": "not detected"
+    },
+    {
+      "label": "Fat, total",
+      "perServe": "0.6 g",
+      "per100g": "7.5 g"
+    },
+    {
+      "label": "- saturated",
+      "perServe": "less than 0.1 g",
+      "per100g": "1.3 g"
+    },
+    {
+      "label": "Carbohydrate",
+      "perServe": "3.0 g",
+      "per100g": "40.1 g"
+    },
+    {
+      "label": "- sugars",
+      "perServe": "0.7 g",
+      "per100g": "9.0 g"
+    },
+    {
+      "label": "Dietary Fibre",
+      "perServe": "1.6 g",
+      "per100g": "22.4 g"
+    },
+    {
+      "label": "Sodium",
+      "perServe": "290 mg",
+      "per100g": "3860 mg"
+    }
+  ],
+  "sachetIngredients": [
+    "Onion",
+    "Coriander",
+    "Garlic",
+    "Turmeric",
+    "Pink Himalayan Salt",
+    "Cinnamon",
+    "Paprika",
+    "Pepper",
+    "Nutmeg",
+    "Cardamom Extract"
+  ],
+  "confidence": [
+    {
+      "field": "method",
+      "note": "Right side of the method was cropped; steps completed and marked reconstructed."
+    },
+    {
+      "field": "sachetIngredients",
+      "note": "Sachet ingredient list ran off the right edge; some middle items approximate."
+    }
+  ],
+  "slug": "butter-chicken",
+  "spiceBlend": {
+    "note": "Estimate for the full recipe (serves 4), based on the sachet ingredients in descending order. The richness comes from butter, cream & passata.",
+    "items": [
+      {
+        "name": "ground coriander",
+        "quantity": "1 tbsp",
+        "note": ""
+      },
+      {
+        "name": "onion powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "garlic powder",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "turmeric",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "salt",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "paprika",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "garam masala",
+        "quantity": "1 tsp",
+        "note": ""
+      },
+      {
+        "name": "cinnamon",
+        "quantity": "1/2 tsp",
+        "note": ""
+      },
+      {
+        "name": "black pepper",
+        "quantity": "1/2 tsp",
+        "note": ""
+      },
+      {
+        "name": "nutmeg",
+        "quantity": "1/4 tsp",
+        "note": ""
+      },
+      {
+        "name": "ground cardamom",
+        "quantity": "1/4 tsp",
+        "note": ""
+      }
+    ],
+    "isEstimate": true
+  },
+  "images": [
+    "recipes/images/butter-chicken-1.jpg"
+  ],
+  "dishImage": "recipes/images/butter-chicken-dish.svg",
+  "needsReview": false,
+  "createdAt": "2026-09-17T12:31:29.744Z",
+  "updatedAt": "2026-09-17T12:31:29.744Z"
+}

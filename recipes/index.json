@@ -27,6 +27,30 @@
     "updatedAt": "2026-09-17T12:18:21.026Z"
   },
   {
+    "slug": "butter-chicken",
+    "dishName": "Butter Chicken",
+    "product": "Butter Chicken Recipe Base",
+    "cuisine": "Indian",
+    "dishImage": "recipes/images/butter-chicken-dish.svg",
+    "needsReview": false,
+    "ingredientNames": [
+      "chicken, paneer or tofu, cut into chunks",
+      "onion, diced",
+      "pumpkin, diced",
+      "carrot, diced",
+      "tomato passata",
+      "cream",
+      "chicken stock",
+      "butter",
+      "cauliflower, chopped",
+      "zucchini, diced",
+      "Rice",
+      "Yoghurt",
+      "Roasted crushed cashews"
+    ],
+    "updatedAt": "2026-09-17T12:31:29.744Z"
+  },
+  {
     "slug": "chilli-con-carne",
     "dishName": "Chilli Con Carne",
     "product": "Chilli Con Carne Recipe Base",

@@ -10,7 +10,7 @@ const EMOJI_RULES: Array<{ keywords: string[]; emoji: string }> = [
   { keywords: ["burrito", "wrap", "enchilada"], emoji: "🌯" },
   { keywords: ["nacho", "quesadilla"], emoji: "🧀" },
   { keywords: ["mexican", "fajita", "chilli", "chili", "con carne"], emoji: "🌶️" },
-  { keywords: ["curry", "korma", "tikka", "masala", "balti", "madras", "biryani"], emoji: "🍛" },
+  { keywords: ["curry", "korma", "tikka", "masala", "balti", "madras", "biryani", "butter chicken"], emoji: "🍛" },
   { keywords: ["thai", "satay", "pad "], emoji: "🥡" },
   { keywords: ["stir fry", "stir-fry", "chow mein", "noodle", "ramen", "laksa"], emoji: "🍜" },
   { keywords: ["sushi", "teriyaki", "japanese"], emoji: "🍣" },
