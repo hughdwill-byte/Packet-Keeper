@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  @apply bg-orange-50 text-stone-800 antialiased;
+  /* respect iPhone safe areas */
+  padding: env(safe-area-inset-top) 0 env(safe-area-inset-bottom);
+}
+
+/* Large touch targets by default */
+button,
+a,
+input,
+select,
+textarea {
+  touch-action: manipulation;
+}
