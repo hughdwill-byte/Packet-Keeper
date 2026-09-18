@@ -3,8 +3,8 @@
  * Uses global fetch (available in browsers and Node 18+). The browser-direct
  * header is required for calling the API straight from a web page.
  */
-import { ExtractionSchema, SpiceBlendSchema, type Extraction, type SpiceBlend } from "./schema";
-import { EXTRACTION_SYSTEM, EXTRACTION_USER, spiceBlendPrompt } from "./prompts";
+import { ExtractionBatchSchema, SpiceBlendSchema, type Extraction, type SpiceBlend } from "./schema";
+import { extractionSystem, EXTRACTION_USER, spiceBlendPrompt } from "./prompts";
 import { extractJson } from "./util";
 
 const ANTHROPIC_URL = "https://api.anthropic.com/v1/messages";
@@ -67,8 +67,16 @@ async function callClaude(
   return text;
 }
 
-/** Extract a recipe from one or more photos of the same packet. */
-export async function extractRecipe(opts: CallOpts, images: ImagePart[]): Promise<Extraction> {
+/**
+ * Extract every recipe visible across one or more images (a packet, a book
+ * page, or a photo — possibly with several recipes). Returns an array.
+ * `stapleKeys` are the price-book keys the shopping list may reference.
+ */
+export async function extractRecipes(
+  opts: CallOpts,
+  images: ImagePart[],
+  stapleKeys: string[] = [],
+): Promise<Extraction[]> {
   const content: ContentBlock[] = [
     ...images.map(
       (img): ContentBlock => ({
@@ -78,10 +86,10 @@ export async function extractRecipe(opts: CallOpts, images: ImagePart[]): Promis
     ),
     { type: "text", text: EXTRACTION_USER },
   ];
-  const text = await callClaude({ ...opts, maxTokens: 4096 }, EXTRACTION_SYSTEM, content);
+  const text = await callClaude({ ...opts, maxTokens: 8192 }, extractionSystem(stapleKeys), content);
   const raw = extractJson(text);
   // Throws on structural failure; caller decides whether to mark needs-review.
-  return ExtractionSchema.parse(raw);
+  return ExtractionBatchSchema.parse(raw).recipes;
 }
 
 /** Generate a homemade spice blend that replaces the sachet. */

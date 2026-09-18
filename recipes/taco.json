@@ -3,6 +3,7 @@
   "product": "Taco Recipe Base",
   "brand": "Mingle",
   "cuisine": "Mexican",
+  "dishType": "Main",
   "serves": "4",
   "prepTime": "5 mins",
   "cookTime": "25 mins",
@@ -131,6 +132,104 @@
     "Basil",
     "Chilli"
   ],
+  "allergens": [],
+  "dietary": [
+    "gluten-free",
+    "dairy-free"
+  ],
+  "shoppingList": [
+    {
+      "name": "Beef mince",
+      "stapleKey": "beef_mince",
+      "quantity": 500,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Onion",
+      "stapleKey": "onion",
+      "quantity": 1,
+      "unit": "each",
+      "optional": false
+    },
+    {
+      "name": "Tomato paste",
+      "stapleKey": "tomato_paste",
+      "quantity": 15,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Beef stock",
+      "stapleKey": "beef_stock",
+      "quantity": 100,
+      "unit": "ml",
+      "optional": false
+    },
+    {
+      "name": "Mingle recipe base sachet",
+      "stapleKey": "recipe_base",
+      "quantity": 30,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Green capsicum",
+      "stapleKey": "green_capsicum",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Carrot",
+      "stapleKey": "carrot",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Zucchini",
+      "stapleKey": "zucchini",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Tortillas",
+      "stapleKey": "tortillas",
+      "quantity": 4,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Grated cheese",
+      "stapleKey": "cheese_grated",
+      "quantity": 100,
+      "unit": "g",
+      "optional": true
+    },
+    {
+      "name": "Salad mix",
+      "stapleKey": "salad_mix",
+      "quantity": 100,
+      "unit": "g",
+      "optional": true
+    },
+    {
+      "name": "Guacamole",
+      "stapleKey": "guacamole",
+      "quantity": 100,
+      "unit": "g",
+      "optional": true
+    },
+    {
+      "name": "Sour cream",
+      "stapleKey": "sour_cream",
+      "quantity": 50,
+      "unit": "g",
+      "optional": true
+    }
+  ],
   "confidence": [
     {
       "field": "method",
@@ -211,7 +310,14 @@
     "recipes/images/taco-1.jpg"
   ],
   "dishImage": "recipes/images/taco-dish.svg",
+  "dishImageFromPhoto": false,
+  "costByStore": {
+    "aldi": 6.53,
+    "coles": 11.76,
+    "woolworths": 11.76,
+    "iga": 14.11
+  },
   "needsReview": true,
   "createdAt": "2026-09-17T12:18:21.026Z",
-  "updatedAt": "2026-09-17T12:18:21.026Z"
+  "updatedAt": "2026-09-18T03:00:54.334Z"
 }

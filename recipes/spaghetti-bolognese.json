@@ -3,6 +3,7 @@
   "product": "Spaghetti Bolognese Recipe Base",
   "brand": "Mingle",
   "cuisine": "Italian",
+  "dishType": "Main",
   "serves": "4",
   "prepTime": "5 mins",
   "cookTime": "25 mins",
@@ -165,6 +166,103 @@
     "Parsley",
     "Olive Oil"
   ],
+  "allergens": [],
+  "dietary": [
+    "dairy-free"
+  ],
+  "shoppingList": [
+    {
+      "name": "Beef mince",
+      "stapleKey": "beef_mince",
+      "quantity": 500,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Onion",
+      "stapleKey": "onion",
+      "quantity": 1,
+      "unit": "each",
+      "optional": false
+    },
+    {
+      "name": "Garlic",
+      "stapleKey": "garlic",
+      "quantity": 1,
+      "unit": "each",
+      "optional": false
+    },
+    {
+      "name": "Tomato paste",
+      "stapleKey": "tomato_paste",
+      "quantity": 30,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Passata",
+      "stapleKey": "passata",
+      "quantity": 200,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Tinned tomatoes",
+      "stapleKey": "tinned_tomatoes",
+      "quantity": 400,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Beef stock",
+      "stapleKey": "beef_stock",
+      "quantity": 250,
+      "unit": "ml",
+      "optional": false
+    },
+    {
+      "name": "Mingle recipe base sachet",
+      "stapleKey": "recipe_base",
+      "quantity": 30,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Carrot",
+      "stapleKey": "carrot",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Zucchini",
+      "stapleKey": "zucchini",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Spaghetti",
+      "stapleKey": "pasta",
+      "quantity": 500,
+      "unit": "g",
+      "optional": true
+    },
+    {
+      "name": "Parmesan",
+      "stapleKey": "parmesan",
+      "quantity": 50,
+      "unit": "g",
+      "optional": true
+    },
+    {
+      "name": "Milk",
+      "stapleKey": "milk",
+      "quantity": 150,
+      "unit": "ml",
+      "optional": true
+    }
+  ],
   "confidence": [
     {
       "field": "method",
@@ -231,7 +329,14 @@
     "recipes/images/spaghetti-bolognese-1.jpg"
   ],
   "dishImage": "recipes/images/spaghetti-bolognese-dish.svg",
+  "dishImageFromPhoto": false,
+  "costByStore": {
+    "aldi": 8.71,
+    "coles": 14.17,
+    "woolworths": 14.17,
+    "iga": 17
+  },
   "needsReview": false,
   "createdAt": "2026-09-17T12:03:47.950Z",
-  "updatedAt": "2026-09-17T12:03:47.950Z"
+  "updatedAt": "2026-09-18T03:00:54.339Z"
 }

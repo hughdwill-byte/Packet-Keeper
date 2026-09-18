@@ -3,6 +3,7 @@
   "product": "Fajita Recipe Base",
   "brand": "Mingle",
   "cuisine": "Mexican",
+  "dishType": "Main",
   "serves": "4",
   "prepTime": "5 mins",
   "cookTime": "25 mins",
@@ -162,6 +163,118 @@
     "Olive Oil",
     "Lime Powder"
   ],
+  "allergens": [],
+  "dietary": [
+    "gluten-free",
+    "dairy-free"
+  ],
+  "shoppingList": [
+    {
+      "name": "Chicken breast",
+      "stapleKey": "chicken_breast",
+      "quantity": 500,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Onion",
+      "stapleKey": "onion",
+      "quantity": 1,
+      "unit": "each",
+      "optional": false
+    },
+    {
+      "name": "Green capsicum",
+      "stapleKey": "green_capsicum",
+      "quantity": 1,
+      "unit": "each",
+      "optional": false
+    },
+    {
+      "name": "Red capsicum",
+      "stapleKey": "red_capsicum",
+      "quantity": 1,
+      "unit": "each",
+      "optional": false
+    },
+    {
+      "name": "Beef stock",
+      "stapleKey": "beef_stock",
+      "quantity": 100,
+      "unit": "ml",
+      "optional": false
+    },
+    {
+      "name": "Tomato paste",
+      "stapleKey": "tomato_paste",
+      "quantity": 15,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Mingle recipe base sachet",
+      "stapleKey": "recipe_base",
+      "quantity": 30,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Zucchini",
+      "stapleKey": "zucchini",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Carrot",
+      "stapleKey": "carrot",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Black beans",
+      "stapleKey": "black_beans",
+      "quantity": 400,
+      "unit": "g",
+      "optional": true
+    },
+    {
+      "name": "Tortillas",
+      "stapleKey": "tortillas",
+      "quantity": 4,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Grated cheese",
+      "stapleKey": "cheese_grated",
+      "quantity": 100,
+      "unit": "g",
+      "optional": true
+    },
+    {
+      "name": "Salad mix",
+      "stapleKey": "salad_mix",
+      "quantity": 100,
+      "unit": "g",
+      "optional": true
+    },
+    {
+      "name": "Guacamole",
+      "stapleKey": "guacamole",
+      "quantity": 100,
+      "unit": "g",
+      "optional": true
+    },
+    {
+      "name": "Sour cream",
+      "stapleKey": "sour_cream",
+      "quantity": 50,
+      "unit": "g",
+      "optional": true
+    }
+  ],
   "confidence": [
     {
       "field": "method",
@@ -237,7 +350,14 @@
     "recipes/images/fajita-1.jpg"
   ],
   "dishImage": "recipes/images/fajita-dish.svg",
+  "dishImageFromPhoto": false,
+  "costByStore": {
+    "aldi": 9.68,
+    "coles": 15.26,
+    "woolworths": 15.26,
+    "iga": 18.31
+  },
   "needsReview": true,
   "createdAt": "2026-09-17T12:03:47.950Z",
-  "updatedAt": "2026-09-17T12:03:47.950Z"
+  "updatedAt": "2026-09-18T03:00:54.337Z"
 }

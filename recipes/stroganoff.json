@@ -3,6 +3,7 @@
   "product": "Stroganoff Recipe Base",
   "brand": "Mingle",
   "cuisine": "Hungarian",
+  "dishType": "Main",
   "serves": "4",
   "prepTime": "5 mins",
   "cookTime": "25 mins",
@@ -156,6 +157,89 @@
     "Pepper",
     "Parsley"
   ],
+  "allergens": [
+    "dairy"
+  ],
+  "dietary": [],
+  "shoppingList": [
+    {
+      "name": "Chicken breast",
+      "stapleKey": "chicken_breast",
+      "quantity": 500,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Onion",
+      "stapleKey": "onion",
+      "quantity": 1,
+      "unit": "each",
+      "optional": false
+    },
+    {
+      "name": "Mushrooms",
+      "stapleKey": "mushrooms",
+      "quantity": 150,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Baby spinach",
+      "stapleKey": "spinach",
+      "quantity": 200,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Sour cream",
+      "stapleKey": "sour_cream",
+      "quantity": 60,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Chicken stock",
+      "stapleKey": "chicken_stock",
+      "quantity": 300,
+      "unit": "ml",
+      "optional": false
+    },
+    {
+      "name": "Tomato paste",
+      "stapleKey": "tomato_paste",
+      "quantity": 30,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Mingle recipe base sachet",
+      "stapleKey": "recipe_base",
+      "quantity": 30,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Zucchini",
+      "stapleKey": "zucchini",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Green capsicum",
+      "stapleKey": "green_capsicum",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Egg noodles",
+      "stapleKey": "egg_noodles",
+      "quantity": 375,
+      "unit": "g",
+      "optional": true
+    }
+  ],
   "confidence": [
     {
       "field": "method",
@@ -207,7 +291,14 @@
     "recipes/images/stroganoff-1.jpg"
   ],
   "dishImage": "recipes/images/stroganoff-dish.svg",
+  "dishImageFromPhoto": false,
+  "costByStore": {
+    "aldi": 12.33,
+    "coles": 18.2,
+    "woolworths": 18.2,
+    "iga": 21.85
+  },
   "needsReview": false,
   "createdAt": "2026-09-17T12:03:47.950Z",
-  "updatedAt": "2026-09-17T12:03:47.950Z"
+  "updatedAt": "2026-09-18T03:00:54.341Z"
 }

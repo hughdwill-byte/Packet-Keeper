@@ -53,3 +53,35 @@ export async function compressImage(file: Blob): Promise<CompressedImage> {
   const base64 = await blobToBase64(blob);
   return { blob, base64, mediaType: "image/jpeg", width, height };
 }
+
+/**
+ * Crop a sub-region (given as 0..1 fractions) out of an image blob and return a
+ * square-ish JPEG suitable for a dish tile. Used when Claude spots a finished-
+ * dish photo on a page.
+ */
+export async function cropRegion(
+  file: Blob,
+  box: { x: number; y: number; w: number; h: number },
+): Promise<Blob> {
+  const img = await fileToImage(file);
+  const clamp = (v: number) => Math.max(0, Math.min(1, v));
+  const sx = clamp(box.x) * img.width;
+  const sy = clamp(box.y) * img.height;
+  const sw = Math.max(1, clamp(box.w) * img.width);
+  const sh = Math.max(1, clamp(box.h) * img.height);
+
+  const target = 800;
+  const canvas = document.createElement("canvas");
+  canvas.width = target;
+  canvas.height = target;
+  const ctx = canvas.getContext("2d");
+  if (!ctx) throw new Error("Canvas 2D not available");
+  // Cover-fit the crop into a square tile.
+  const scale = Math.max(target / sw, target / sh);
+  const dw = sw * scale;
+  const dh = sh * scale;
+  ctx.drawImage(img, sx, sy, sw, sh, (target - dw) / 2, (target - dh) / 2, dw, dh);
+  return await new Promise<Blob>((res, rej) =>
+    canvas.toBlob((b) => (b ? res(b) : rej(new Error("toBlob failed"))), "image/jpeg", 0.85),
+  );
+}

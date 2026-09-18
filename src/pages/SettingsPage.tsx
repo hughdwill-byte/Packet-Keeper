@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { loadSettings, saveSettings, type Settings } from "../lib/settings";
 import { checkAccess } from "../lib/github";
+import { STORES, STORE_LABELS, type Store } from "../shared/schema";
 
 const input = "w-full rounded-lg border border-orange-200 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500";
 const label = "mb-1 block text-xs font-semibold uppercase text-stone-500";
@@ -58,6 +59,13 @@ export default function SettingsPage() {
             {(MODELS.includes(s.model) ? MODELS : [s.model, ...MODELS]).map((m) => (
               <option key={m} value={m}>{m}</option>
             ))}
+          </select>
+        </div>
+
+        <div>
+          <span className={label}>Preferred store (for prices)</span>
+          <select className={input} value={s.preferredStore} onChange={(e) => set({ preferredStore: e.target.value as Store })}>
+            {STORES.map((st) => <option key={st} value={st}>{STORE_LABELS[st]}</option>)}
           </select>
         </div>
 

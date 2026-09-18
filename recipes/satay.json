@@ -3,6 +3,7 @@
   "product": "Satay Recipe Base",
   "brand": "Mingle",
   "cuisine": "Malaysian",
+  "dishType": "Main",
   "serves": "4",
   "prepTime": "5 mins",
   "cookTime": "25 mins",
@@ -140,6 +141,105 @@
     "Cardamom",
     "Nutmeg"
   ],
+  "allergens": [
+    "peanut"
+  ],
+  "dietary": [
+    "dairy-free"
+  ],
+  "shoppingList": [
+    {
+      "name": "Chicken breast",
+      "stapleKey": "chicken_breast",
+      "quantity": 500,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Onion",
+      "stapleKey": "onion",
+      "quantity": 1,
+      "unit": "each",
+      "optional": false
+    },
+    {
+      "name": "Chicken stock",
+      "stapleKey": "chicken_stock",
+      "quantity": 200,
+      "unit": "ml",
+      "optional": false
+    },
+    {
+      "name": "Coconut cream",
+      "stapleKey": "coconut_cream",
+      "quantity": 250,
+      "unit": "ml",
+      "optional": false
+    },
+    {
+      "name": "Peanut butter",
+      "stapleKey": "peanut_butter",
+      "quantity": 90,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Mingle recipe base sachet",
+      "stapleKey": "recipe_base",
+      "quantity": 30,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Red capsicum",
+      "stapleKey": "red_capsicum",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Broccoli",
+      "stapleKey": "broccoli",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Zucchini",
+      "stapleKey": "zucchini",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Rice",
+      "stapleKey": "rice",
+      "quantity": 200,
+      "unit": "g",
+      "optional": true
+    },
+    {
+      "name": "Coriander",
+      "stapleKey": "coriander",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Lime",
+      "stapleKey": "lime",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Peanuts",
+      "stapleKey": "peanuts",
+      "quantity": 50,
+      "unit": "g",
+      "optional": true
+    }
+  ],
   "confidence": [
     {
       "field": "method",
@@ -215,7 +315,14 @@
     "recipes/images/satay-1.jpg"
   ],
   "dishImage": "recipes/images/satay-dish.svg",
+  "dishImageFromPhoto": false,
+  "costByStore": {
+    "aldi": 8.42,
+    "coles": 13.86,
+    "woolworths": 13.86,
+    "iga": 16.63
+  },
   "needsReview": true,
   "createdAt": "2026-09-17T12:18:21.026Z",
-  "updatedAt": "2026-09-17T12:18:21.026Z"
+  "updatedAt": "2026-09-18T03:00:54.344Z"
 }

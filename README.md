@@ -106,6 +106,32 @@ git add recipes && git commit -m "Import samples" && git push
 `.env` is git-ignored and must never be committed. The script never touches or
 commits `./samples/`.
 
+## v2 — books, filters & cost estimates
+
+- **Upload PDFs & recipe photos** — as well as packets, you can upload a **PDF of a
+  recipe book** or a **photo of a recipe**. PDFs are rendered page‑by‑page in the
+  browser (pdf.js) and each page can yield **one or more recipes**.
+- **Dish photo tiles** — if a finished‑dish photo is visible, it's cropped out and
+  used as the card image; otherwise a food‑emoji tile is used.
+- **Filters** — filter the grid by **dish type**, **cuisine**, **diet**
+  (vegetarian/vegan/gluten‑free/…) and **exclude allergens**; sort A–Z or by cost.
+- **Cost estimates & shopping lists** — pick a store (**ALDI / Coles / Woolworths /
+  IGA**) to see an estimated **cost to make** and a **shopping list of suggested
+  products** (whole packs + a total). Costs come from `recipes/prices.json`.
+
+### About the prices (important)
+
+Prices are **estimates**, stored in `recipes/prices.json`, **not scraped live**.
+Live direct‑from‑browser pricing isn't possible from a static site (CORS +
+supermarket bot‑protection + terms of service), and ALDI/IGA barely publish prices
+online. ALDI & IGA figures are estimates; IGA varies by store; ALDI cost excludes
+items ALDI doesn't stock (e.g. the Mingle sachet).
+
+**To refresh prices:** edit `recipes/prices.json` (each staple has a per‑store
+`price` and `product`), commit, and push. Re‑open a recipe and hit **Save** in the
+editor to recompute its cost, or costs recompute automatically the next time a
+recipe is saved.
+
 ## Project layout
 
 ```

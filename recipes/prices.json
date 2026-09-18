@@ -1,0 +1,1326 @@
+{
+  "updatedAt": "2026-09-18",
+  "note": "Estimated Australian supermarket prices, refreshed periodically. NOT live/scraped. ALDI & IGA figures are estimates; IGA prices vary by store.",
+  "items": {
+    "beef_mince": {
+      "name": "Beef mince",
+      "pack": 500,
+      "unit": "g",
+      "category": "meat",
+      "stores": {
+        "aldi": {
+          "price": 5.85,
+          "product": "ALDI Beef mince 500g"
+        },
+        "coles": {
+          "price": 6.5,
+          "product": "Coles Beef mince 500g"
+        },
+        "woolworths": {
+          "price": 6.5,
+          "product": "Woolworths Beef mince 500g"
+        },
+        "iga": {
+          "price": 7.8,
+          "product": "Black & Gold Beef mince 500g"
+        }
+      }
+    },
+    "chicken_breast": {
+      "name": "Chicken breast fillets",
+      "pack": 500,
+      "unit": "g",
+      "category": "meat",
+      "stores": {
+        "aldi": {
+          "price": 6.3,
+          "product": "ALDI Chicken breast fillets 500g"
+        },
+        "coles": {
+          "price": 7,
+          "product": "Coles Chicken breast fillets 500g"
+        },
+        "woolworths": {
+          "price": 7,
+          "product": "Woolworths Chicken breast fillets 500g"
+        },
+        "iga": {
+          "price": 8.4,
+          "product": "Black & Gold Chicken breast fillets 500g"
+        }
+      }
+    },
+    "chicken_mince": {
+      "name": "Chicken mince",
+      "pack": 500,
+      "unit": "g",
+      "category": "meat",
+      "stores": {
+        "aldi": {
+          "price": 5.85,
+          "product": "ALDI Chicken mince 500g"
+        },
+        "coles": {
+          "price": 6.5,
+          "product": "Coles Chicken mince 500g"
+        },
+        "woolworths": {
+          "price": 6.5,
+          "product": "Woolworths Chicken mince 500g"
+        },
+        "iga": {
+          "price": 7.8,
+          "product": "Black & Gold Chicken mince 500g"
+        }
+      }
+    },
+    "pork_mince": {
+      "name": "Pork mince",
+      "pack": 500,
+      "unit": "g",
+      "category": "meat",
+      "stores": {
+        "aldi": {
+          "price": 6.3,
+          "product": "ALDI Pork mince 500g"
+        },
+        "coles": {
+          "price": 7,
+          "product": "Coles Pork mince 500g"
+        },
+        "woolworths": {
+          "price": 7,
+          "product": "Woolworths Pork mince 500g"
+        },
+        "iga": {
+          "price": 8.4,
+          "product": "Black & Gold Pork mince 500g"
+        }
+      }
+    },
+    "prawns": {
+      "name": "Raw prawns",
+      "pack": 500,
+      "unit": "g",
+      "category": "meat",
+      "stores": {
+        "aldi": {
+          "price": 12.6,
+          "product": "ALDI Raw prawns 500g"
+        },
+        "coles": {
+          "price": 14,
+          "product": "Coles Raw prawns 500g"
+        },
+        "woolworths": {
+          "price": 14,
+          "product": "Woolworths Raw prawns 500g"
+        },
+        "iga": {
+          "price": 16.8,
+          "product": "Black & Gold Raw prawns 500g"
+        }
+      }
+    },
+    "tofu": {
+      "name": "Firm tofu",
+      "pack": 300,
+      "unit": "g",
+      "category": "protein",
+      "stores": {
+        "aldi": {
+          "price": 3.15,
+          "product": "ALDI Firm tofu 300g"
+        },
+        "coles": {
+          "price": 3.5,
+          "product": "Coles Firm tofu 300g"
+        },
+        "woolworths": {
+          "price": 3.5,
+          "product": "Woolworths Firm tofu 300g"
+        },
+        "iga": {
+          "price": 4.2,
+          "product": "Black & Gold Firm tofu 300g"
+        }
+      }
+    },
+    "paneer": {
+      "name": "Paneer",
+      "pack": 225,
+      "unit": "g",
+      "category": "protein",
+      "stores": {
+        "aldi": {
+          "price": 5.4,
+          "product": "ALDI Paneer 225g"
+        },
+        "coles": {
+          "price": 6,
+          "product": "Coles Paneer 225g"
+        },
+        "woolworths": {
+          "price": 6,
+          "product": "Woolworths Paneer 225g"
+        },
+        "iga": {
+          "price": 7.2,
+          "product": "Black & Gold Paneer 225g"
+        }
+      }
+    },
+    "onion": {
+      "name": "Brown onion",
+      "pack": 1,
+      "unit": "each",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 0.45,
+          "product": "ALDI Brown onion each"
+        },
+        "coles": {
+          "price": 0.5,
+          "product": "Coles Brown onion each"
+        },
+        "woolworths": {
+          "price": 0.5,
+          "product": "Woolworths Brown onion each"
+        },
+        "iga": {
+          "price": 0.6,
+          "product": "Black & Gold Brown onion each"
+        }
+      }
+    },
+    "garlic": {
+      "name": "Garlic bulb",
+      "pack": 1,
+      "unit": "each",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 0.63,
+          "product": "ALDI Garlic bulb each"
+        },
+        "coles": {
+          "price": 0.7,
+          "product": "Coles Garlic bulb each"
+        },
+        "woolworths": {
+          "price": 0.7,
+          "product": "Woolworths Garlic bulb each"
+        },
+        "iga": {
+          "price": 0.84,
+          "product": "Black & Gold Garlic bulb each"
+        }
+      }
+    },
+    "carrot": {
+      "name": "Carrot",
+      "pack": 1,
+      "unit": "each",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 0.23,
+          "product": "ALDI Carrot each"
+        },
+        "coles": {
+          "price": 0.25,
+          "product": "Coles Carrot each"
+        },
+        "woolworths": {
+          "price": 0.25,
+          "product": "Woolworths Carrot each"
+        },
+        "iga": {
+          "price": 0.3,
+          "product": "Black & Gold Carrot each"
+        }
+      }
+    },
+    "zucchini": {
+      "name": "Zucchini",
+      "pack": 1,
+      "unit": "each",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 0.72,
+          "product": "ALDI Zucchini each"
+        },
+        "coles": {
+          "price": 0.8,
+          "product": "Coles Zucchini each"
+        },
+        "woolworths": {
+          "price": 0.8,
+          "product": "Woolworths Zucchini each"
+        },
+        "iga": {
+          "price": 0.96,
+          "product": "Black & Gold Zucchini each"
+        }
+      }
+    },
+    "green_capsicum": {
+      "name": "Green capsicum",
+      "pack": 1,
+      "unit": "each",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 1.26,
+          "product": "ALDI Green capsicum each"
+        },
+        "coles": {
+          "price": 1.4,
+          "product": "Coles Green capsicum each"
+        },
+        "woolworths": {
+          "price": 1.4,
+          "product": "Woolworths Green capsicum each"
+        },
+        "iga": {
+          "price": 1.68,
+          "product": "Black & Gold Green capsicum each"
+        }
+      }
+    },
+    "red_capsicum": {
+      "name": "Red capsicum",
+      "pack": 1,
+      "unit": "each",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 1.44,
+          "product": "ALDI Red capsicum each"
+        },
+        "coles": {
+          "price": 1.6,
+          "product": "Coles Red capsicum each"
+        },
+        "woolworths": {
+          "price": 1.6,
+          "product": "Woolworths Red capsicum each"
+        },
+        "iga": {
+          "price": 1.92,
+          "product": "Black & Gold Red capsicum each"
+        }
+      }
+    },
+    "cauliflower": {
+      "name": "Cauliflower",
+      "pack": 1,
+      "unit": "each",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 3.6,
+          "product": "ALDI Cauliflower each"
+        },
+        "coles": {
+          "price": 4,
+          "product": "Coles Cauliflower each"
+        },
+        "woolworths": {
+          "price": 4,
+          "product": "Woolworths Cauliflower each"
+        },
+        "iga": {
+          "price": 4.8,
+          "product": "Black & Gold Cauliflower each"
+        }
+      }
+    },
+    "broccoli": {
+      "name": "Broccoli head",
+      "pack": 1,
+      "unit": "each",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 1.8,
+          "product": "ALDI Broccoli head each"
+        },
+        "coles": {
+          "price": 2,
+          "product": "Coles Broccoli head each"
+        },
+        "woolworths": {
+          "price": 2,
+          "product": "Woolworths Broccoli head each"
+        },
+        "iga": {
+          "price": 2.4,
+          "product": "Black & Gold Broccoli head each"
+        }
+      }
+    },
+    "pumpkin": {
+      "name": "Pumpkin",
+      "pack": 1000,
+      "unit": "g",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 1.98,
+          "product": "ALDI Pumpkin 1000g"
+        },
+        "coles": {
+          "price": 2.2,
+          "product": "Coles Pumpkin 1000g"
+        },
+        "woolworths": {
+          "price": 2.2,
+          "product": "Woolworths Pumpkin 1000g"
+        },
+        "iga": {
+          "price": 2.64,
+          "product": "Black & Gold Pumpkin 1000g"
+        }
+      }
+    },
+    "eggplant": {
+      "name": "Eggplant",
+      "pack": 1,
+      "unit": "each",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 1.62,
+          "product": "ALDI Eggplant each"
+        },
+        "coles": {
+          "price": 1.8,
+          "product": "Coles Eggplant each"
+        },
+        "woolworths": {
+          "price": 1.8,
+          "product": "Woolworths Eggplant each"
+        },
+        "iga": {
+          "price": 2.16,
+          "product": "Black & Gold Eggplant each"
+        }
+      }
+    },
+    "potato": {
+      "name": "Potatoes",
+      "pack": 1000,
+      "unit": "g",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 2.7,
+          "product": "ALDI Potatoes 1000g"
+        },
+        "coles": {
+          "price": 3,
+          "product": "Coles Potatoes 1000g"
+        },
+        "woolworths": {
+          "price": 3,
+          "product": "Woolworths Potatoes 1000g"
+        },
+        "iga": {
+          "price": 3.6,
+          "product": "Black & Gold Potatoes 1000g"
+        }
+      }
+    },
+    "cabbage": {
+      "name": "Cabbage",
+      "pack": 1,
+      "unit": "each",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 3.15,
+          "product": "ALDI Cabbage each"
+        },
+        "coles": {
+          "price": 3.5,
+          "product": "Coles Cabbage each"
+        },
+        "woolworths": {
+          "price": 3.5,
+          "product": "Woolworths Cabbage each"
+        },
+        "iga": {
+          "price": 4.2,
+          "product": "Black & Gold Cabbage each"
+        }
+      }
+    },
+    "spinach": {
+      "name": "Baby spinach",
+      "pack": 200,
+      "unit": "g",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 2.7,
+          "product": "ALDI Baby spinach 200g"
+        },
+        "coles": {
+          "price": 3,
+          "product": "Coles Baby spinach 200g"
+        },
+        "woolworths": {
+          "price": 3,
+          "product": "Woolworths Baby spinach 200g"
+        },
+        "iga": {
+          "price": 3.6,
+          "product": "Black & Gold Baby spinach 200g"
+        }
+      }
+    },
+    "mushrooms": {
+      "name": "Mushrooms",
+      "pack": 200,
+      "unit": "g",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 2.52,
+          "product": "ALDI Mushrooms 200g"
+        },
+        "coles": {
+          "price": 2.8,
+          "product": "Coles Mushrooms 200g"
+        },
+        "woolworths": {
+          "price": 2.8,
+          "product": "Woolworths Mushrooms 200g"
+        },
+        "iga": {
+          "price": 3.36,
+          "product": "Black & Gold Mushrooms 200g"
+        }
+      }
+    },
+    "spring_onion": {
+      "name": "Spring onions (bunch)",
+      "pack": 1,
+      "unit": "each",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 1.62,
+          "product": "ALDI Spring onions (bunch) each"
+        },
+        "coles": {
+          "price": 1.8,
+          "product": "Coles Spring onions (bunch) each"
+        },
+        "woolworths": {
+          "price": 1.8,
+          "product": "Woolworths Spring onions (bunch) each"
+        },
+        "iga": {
+          "price": 2.16,
+          "product": "Black & Gold Spring onions (bunch) each"
+        }
+      }
+    },
+    "tomatoes": {
+      "name": "Tomato",
+      "pack": 1,
+      "unit": "each",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 0.63,
+          "product": "ALDI Tomato each"
+        },
+        "coles": {
+          "price": 0.7,
+          "product": "Coles Tomato each"
+        },
+        "woolworths": {
+          "price": 0.7,
+          "product": "Woolworths Tomato each"
+        },
+        "iga": {
+          "price": 0.84,
+          "product": "Black & Gold Tomato each"
+        }
+      }
+    },
+    "lemon": {
+      "name": "Lemon",
+      "pack": 1,
+      "unit": "each",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 0.72,
+          "product": "ALDI Lemon each"
+        },
+        "coles": {
+          "price": 0.8,
+          "product": "Coles Lemon each"
+        },
+        "woolworths": {
+          "price": 0.8,
+          "product": "Woolworths Lemon each"
+        },
+        "iga": {
+          "price": 0.96,
+          "product": "Black & Gold Lemon each"
+        }
+      }
+    },
+    "lime": {
+      "name": "Lime",
+      "pack": 1,
+      "unit": "each",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 0.72,
+          "product": "ALDI Lime each"
+        },
+        "coles": {
+          "price": 0.8,
+          "product": "Coles Lime each"
+        },
+        "woolworths": {
+          "price": 0.8,
+          "product": "Woolworths Lime each"
+        },
+        "iga": {
+          "price": 0.96,
+          "product": "Black & Gold Lime each"
+        }
+      }
+    },
+    "coriander": {
+      "name": "Coriander (bunch)",
+      "pack": 1,
+      "unit": "each",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 2.52,
+          "product": "ALDI Coriander (bunch) each"
+        },
+        "coles": {
+          "price": 2.8,
+          "product": "Coles Coriander (bunch) each"
+        },
+        "woolworths": {
+          "price": 2.8,
+          "product": "Woolworths Coriander (bunch) each"
+        },
+        "iga": {
+          "price": 3.36,
+          "product": "Black & Gold Coriander (bunch) each"
+        }
+      }
+    },
+    "curry_leaves": {
+      "name": "Curry leaves (pack)",
+      "pack": 1,
+      "unit": "each",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 2.7,
+          "product": "ALDI Curry leaves (pack) each"
+        },
+        "coles": {
+          "price": 3,
+          "product": "Coles Curry leaves (pack) each"
+        },
+        "woolworths": {
+          "price": 3,
+          "product": "Woolworths Curry leaves (pack) each"
+        },
+        "iga": {
+          "price": 3.6,
+          "product": "Black & Gold Curry leaves (pack) each"
+        }
+      }
+    },
+    "salad_mix": {
+      "name": "Salad mix",
+      "pack": 250,
+      "unit": "g",
+      "category": "veg",
+      "stores": {
+        "aldi": {
+          "price": 2.7,
+          "product": "ALDI Salad mix 250g"
+        },
+        "coles": {
+          "price": 3,
+          "product": "Coles Salad mix 250g"
+        },
+        "woolworths": {
+          "price": 3,
+          "product": "Woolworths Salad mix 250g"
+        },
+        "iga": {
+          "price": 3.6,
+          "product": "Black & Gold Salad mix 250g"
+        }
+      }
+    },
+    "tomato_paste": {
+      "name": "Tomato paste",
+      "pack": 140,
+      "unit": "g",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 0.9,
+          "product": "ALDI Tomato paste 140g"
+        },
+        "coles": {
+          "price": 1,
+          "product": "Coles Tomato paste 140g"
+        },
+        "woolworths": {
+          "price": 1,
+          "product": "Woolworths Tomato paste 140g"
+        },
+        "iga": {
+          "price": 1.2,
+          "product": "Black & Gold Tomato paste 140g"
+        }
+      }
+    },
+    "passata": {
+      "name": "Tomato passata",
+      "pack": 700,
+      "unit": "g",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 1.35,
+          "product": "ALDI Tomato passata 700g"
+        },
+        "coles": {
+          "price": 1.5,
+          "product": "Coles Tomato passata 700g"
+        },
+        "woolworths": {
+          "price": 1.5,
+          "product": "Woolworths Tomato passata 700g"
+        },
+        "iga": {
+          "price": 1.8,
+          "product": "Black & Gold Tomato passata 700g"
+        }
+      }
+    },
+    "tinned_tomatoes": {
+      "name": "Tinned tomatoes",
+      "pack": 400,
+      "unit": "g",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 0.86,
+          "product": "ALDI Tinned tomatoes 400g"
+        },
+        "coles": {
+          "price": 0.95,
+          "product": "Coles Tinned tomatoes 400g"
+        },
+        "woolworths": {
+          "price": 0.95,
+          "product": "Woolworths Tinned tomatoes 400g"
+        },
+        "iga": {
+          "price": 1.14,
+          "product": "Black & Gold Tinned tomatoes 400g"
+        }
+      }
+    },
+    "black_beans": {
+      "name": "Tinned black beans",
+      "pack": 400,
+      "unit": "g",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 0.99,
+          "product": "ALDI Tinned black beans 400g"
+        },
+        "coles": {
+          "price": 1.1,
+          "product": "Coles Tinned black beans 400g"
+        },
+        "woolworths": {
+          "price": 1.1,
+          "product": "Woolworths Tinned black beans 400g"
+        },
+        "iga": {
+          "price": 1.32,
+          "product": "Black & Gold Tinned black beans 400g"
+        }
+      }
+    },
+    "lentils": {
+      "name": "Tinned lentils",
+      "pack": 400,
+      "unit": "g",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 0.99,
+          "product": "ALDI Tinned lentils 400g"
+        },
+        "coles": {
+          "price": 1.1,
+          "product": "Coles Tinned lentils 400g"
+        },
+        "woolworths": {
+          "price": 1.1,
+          "product": "Woolworths Tinned lentils 400g"
+        },
+        "iga": {
+          "price": 1.32,
+          "product": "Black & Gold Tinned lentils 400g"
+        }
+      }
+    },
+    "beef_stock": {
+      "name": "Beef stock",
+      "pack": 1000,
+      "unit": "ml",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 1.35,
+          "product": "ALDI Beef stock 1000ml"
+        },
+        "coles": {
+          "price": 1.5,
+          "product": "Coles Beef stock 1000ml"
+        },
+        "woolworths": {
+          "price": 1.5,
+          "product": "Woolworths Beef stock 1000ml"
+        },
+        "iga": {
+          "price": 1.8,
+          "product": "Black & Gold Beef stock 1000ml"
+        }
+      }
+    },
+    "chicken_stock": {
+      "name": "Chicken stock",
+      "pack": 1000,
+      "unit": "ml",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 1.35,
+          "product": "ALDI Chicken stock 1000ml"
+        },
+        "coles": {
+          "price": 1.5,
+          "product": "Coles Chicken stock 1000ml"
+        },
+        "woolworths": {
+          "price": 1.5,
+          "product": "Woolworths Chicken stock 1000ml"
+        },
+        "iga": {
+          "price": 1.8,
+          "product": "Black & Gold Chicken stock 1000ml"
+        }
+      }
+    },
+    "coconut_cream": {
+      "name": "Coconut cream",
+      "pack": 400,
+      "unit": "ml",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 1.26,
+          "product": "ALDI Coconut cream 400ml"
+        },
+        "coles": {
+          "price": 1.4,
+          "product": "Coles Coconut cream 400ml"
+        },
+        "woolworths": {
+          "price": 1.4,
+          "product": "Woolworths Coconut cream 400ml"
+        },
+        "iga": {
+          "price": 1.68,
+          "product": "Black & Gold Coconut cream 400ml"
+        }
+      }
+    },
+    "rice": {
+      "name": "White rice",
+      "pack": 1000,
+      "unit": "g",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 2.34,
+          "product": "ALDI White rice 1000g"
+        },
+        "coles": {
+          "price": 2.6,
+          "product": "Coles White rice 1000g"
+        },
+        "woolworths": {
+          "price": 2.6,
+          "product": "Woolworths White rice 1000g"
+        },
+        "iga": {
+          "price": 3.12,
+          "product": "Black & Gold White rice 1000g"
+        }
+      }
+    },
+    "pasta": {
+      "name": "Pasta",
+      "pack": 500,
+      "unit": "g",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 1.17,
+          "product": "ALDI Pasta 500g"
+        },
+        "coles": {
+          "price": 1.3,
+          "product": "Coles Pasta 500g"
+        },
+        "woolworths": {
+          "price": 1.3,
+          "product": "Woolworths Pasta 500g"
+        },
+        "iga": {
+          "price": 1.56,
+          "product": "Black & Gold Pasta 500g"
+        }
+      }
+    },
+    "egg_noodles": {
+      "name": "Egg noodles",
+      "pack": 375,
+      "unit": "g",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 2.16,
+          "product": "ALDI Egg noodles 375g"
+        },
+        "coles": {
+          "price": 2.4,
+          "product": "Coles Egg noodles 375g"
+        },
+        "woolworths": {
+          "price": 2.4,
+          "product": "Woolworths Egg noodles 375g"
+        },
+        "iga": {
+          "price": 2.88,
+          "product": "Black & Gold Egg noodles 375g"
+        }
+      }
+    },
+    "tortillas": {
+      "name": "Tortillas (8 pack)",
+      "pack": 8,
+      "unit": "each",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 2.34,
+          "product": "ALDI Tortillas (8 pack) 8 pack"
+        },
+        "coles": {
+          "price": 2.6,
+          "product": "Coles Tortillas (8 pack) 8 pack"
+        },
+        "woolworths": {
+          "price": 2.6,
+          "product": "Woolworths Tortillas (8 pack) 8 pack"
+        },
+        "iga": {
+          "price": 3.12,
+          "product": "Black & Gold Tortillas (8 pack) 8 pack"
+        }
+      }
+    },
+    "peanut_butter": {
+      "name": "Peanut butter",
+      "pack": 500,
+      "unit": "g",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 3.42,
+          "product": "ALDI Peanut butter 500g"
+        },
+        "coles": {
+          "price": 3.8,
+          "product": "Coles Peanut butter 500g"
+        },
+        "woolworths": {
+          "price": 3.8,
+          "product": "Woolworths Peanut butter 500g"
+        },
+        "iga": {
+          "price": 4.56,
+          "product": "Black & Gold Peanut butter 500g"
+        }
+      }
+    },
+    "cashews": {
+      "name": "Cashews",
+      "pack": 375,
+      "unit": "g",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 4.95,
+          "product": "ALDI Cashews 375g"
+        },
+        "coles": {
+          "price": 5.5,
+          "product": "Coles Cashews 375g"
+        },
+        "woolworths": {
+          "price": 5.5,
+          "product": "Woolworths Cashews 375g"
+        },
+        "iga": {
+          "price": 6.6,
+          "product": "Black & Gold Cashews 375g"
+        }
+      }
+    },
+    "peanuts": {
+      "name": "Peanuts",
+      "pack": 400,
+      "unit": "g",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 3.15,
+          "product": "ALDI Peanuts 400g"
+        },
+        "coles": {
+          "price": 3.5,
+          "product": "Coles Peanuts 400g"
+        },
+        "woolworths": {
+          "price": 3.5,
+          "product": "Woolworths Peanuts 400g"
+        },
+        "iga": {
+          "price": 4.2,
+          "product": "Black & Gold Peanuts 400g"
+        }
+      }
+    },
+    "corn_chips": {
+      "name": "Corn chips",
+      "pack": 175,
+      "unit": "g",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 2.25,
+          "product": "ALDI Corn chips 175g"
+        },
+        "coles": {
+          "price": 2.5,
+          "product": "Coles Corn chips 175g"
+        },
+        "woolworths": {
+          "price": 2.5,
+          "product": "Woolworths Corn chips 175g"
+        },
+        "iga": {
+          "price": 3,
+          "product": "Black & Gold Corn chips 175g"
+        }
+      }
+    },
+    "olive_oil": {
+      "name": "Olive oil",
+      "pack": 500,
+      "unit": "ml",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": 5.4,
+          "product": "ALDI Olive oil 500ml"
+        },
+        "coles": {
+          "price": 6,
+          "product": "Coles Olive oil 500ml"
+        },
+        "woolworths": {
+          "price": 6,
+          "product": "Woolworths Olive oil 500ml"
+        },
+        "iga": {
+          "price": 7.2,
+          "product": "Black & Gold Olive oil 500ml"
+        }
+      }
+    },
+    "cream": {
+      "name": "Thickened cream",
+      "pack": 300,
+      "unit": "ml",
+      "category": "dairy",
+      "stores": {
+        "aldi": {
+          "price": 1.89,
+          "product": "ALDI Thickened cream 300ml"
+        },
+        "coles": {
+          "price": 2.1,
+          "product": "Coles Thickened cream 300ml"
+        },
+        "woolworths": {
+          "price": 2.1,
+          "product": "Woolworths Thickened cream 300ml"
+        },
+        "iga": {
+          "price": 2.52,
+          "product": "Black & Gold Thickened cream 300ml"
+        }
+      }
+    },
+    "sour_cream": {
+      "name": "Sour cream",
+      "pack": 300,
+      "unit": "g",
+      "category": "dairy",
+      "stores": {
+        "aldi": {
+          "price": 1.98,
+          "product": "ALDI Sour cream 300g"
+        },
+        "coles": {
+          "price": 2.2,
+          "product": "Coles Sour cream 300g"
+        },
+        "woolworths": {
+          "price": 2.2,
+          "product": "Woolworths Sour cream 300g"
+        },
+        "iga": {
+          "price": 2.64,
+          "product": "Black & Gold Sour cream 300g"
+        }
+      }
+    },
+    "cream_cheese": {
+      "name": "Cream cheese",
+      "pack": 250,
+      "unit": "g",
+      "category": "dairy",
+      "stores": {
+        "aldi": {
+          "price": 2.7,
+          "product": "ALDI Cream cheese 250g"
+        },
+        "coles": {
+          "price": 3,
+          "product": "Coles Cream cheese 250g"
+        },
+        "woolworths": {
+          "price": 3,
+          "product": "Woolworths Cream cheese 250g"
+        },
+        "iga": {
+          "price": 3.6,
+          "product": "Black & Gold Cream cheese 250g"
+        }
+      }
+    },
+    "butter": {
+      "name": "Butter",
+      "pack": 250,
+      "unit": "g",
+      "category": "dairy",
+      "stores": {
+        "aldi": {
+          "price": 3.6,
+          "product": "ALDI Butter 250g"
+        },
+        "coles": {
+          "price": 4,
+          "product": "Coles Butter 250g"
+        },
+        "woolworths": {
+          "price": 4,
+          "product": "Woolworths Butter 250g"
+        },
+        "iga": {
+          "price": 4.8,
+          "product": "Black & Gold Butter 250g"
+        }
+      }
+    },
+    "cheese_grated": {
+      "name": "Grated tasty cheese",
+      "pack": 500,
+      "unit": "g",
+      "category": "dairy",
+      "stores": {
+        "aldi": {
+          "price": 5.85,
+          "product": "ALDI Grated tasty cheese 500g"
+        },
+        "coles": {
+          "price": 6.5,
+          "product": "Coles Grated tasty cheese 500g"
+        },
+        "woolworths": {
+          "price": 6.5,
+          "product": "Woolworths Grated tasty cheese 500g"
+        },
+        "iga": {
+          "price": 7.8,
+          "product": "Black & Gold Grated tasty cheese 500g"
+        }
+      }
+    },
+    "parmesan": {
+      "name": "Parmesan",
+      "pack": 250,
+      "unit": "g",
+      "category": "dairy",
+      "stores": {
+        "aldi": {
+          "price": 4.95,
+          "product": "ALDI Parmesan 250g"
+        },
+        "coles": {
+          "price": 5.5,
+          "product": "Coles Parmesan 250g"
+        },
+        "woolworths": {
+          "price": 5.5,
+          "product": "Woolworths Parmesan 250g"
+        },
+        "iga": {
+          "price": 6.6,
+          "product": "Black & Gold Parmesan 250g"
+        }
+      }
+    },
+    "milk": {
+      "name": "Milk",
+      "pack": 2000,
+      "unit": "ml",
+      "category": "dairy",
+      "stores": {
+        "aldi": {
+          "price": 2.79,
+          "product": "ALDI Milk 2000ml"
+        },
+        "coles": {
+          "price": 3.1,
+          "product": "Coles Milk 2000ml"
+        },
+        "woolworths": {
+          "price": 3.1,
+          "product": "Woolworths Milk 2000ml"
+        },
+        "iga": {
+          "price": 3.72,
+          "product": "Black & Gold Milk 2000ml"
+        }
+      }
+    },
+    "yoghurt": {
+      "name": "Natural yoghurt",
+      "pack": 1000,
+      "unit": "g",
+      "category": "dairy",
+      "stores": {
+        "aldi": {
+          "price": 4.5,
+          "product": "ALDI Natural yoghurt 1000g"
+        },
+        "coles": {
+          "price": 5,
+          "product": "Coles Natural yoghurt 1000g"
+        },
+        "woolworths": {
+          "price": 5,
+          "product": "Woolworths Natural yoghurt 1000g"
+        },
+        "iga": {
+          "price": 6,
+          "product": "Black & Gold Natural yoghurt 1000g"
+        }
+      }
+    },
+    "guacamole": {
+      "name": "Guacamole",
+      "pack": 200,
+      "unit": "g",
+      "category": "dairy",
+      "stores": {
+        "aldi": {
+          "price": 3.15,
+          "product": "ALDI Guacamole 200g"
+        },
+        "coles": {
+          "price": 3.5,
+          "product": "Coles Guacamole 200g"
+        },
+        "woolworths": {
+          "price": 3.5,
+          "product": "Woolworths Guacamole 200g"
+        },
+        "iga": {
+          "price": 4.2,
+          "product": "Black & Gold Guacamole 200g"
+        }
+      }
+    },
+    "recipe_base": {
+      "name": "Mingle recipe base sachet",
+      "pack": 30,
+      "unit": "g",
+      "category": "pantry",
+      "stores": {
+        "aldi": {
+          "price": null,
+          "product": "(not stocked at ALDI)"
+        },
+        "coles": {
+          "price": 4.5,
+          "product": "Coles Mingle recipe base sachet 30g"
+        },
+        "woolworths": {
+          "price": 4.5,
+          "product": "Woolworths Mingle recipe base sachet 30g"
+        },
+        "iga": {
+          "price": 5.4,
+          "product": "Black & Gold Mingle recipe base sachet 30g"
+        }
+      }
+    }
+  }
+}

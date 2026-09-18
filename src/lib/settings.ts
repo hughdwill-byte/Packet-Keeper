@@ -3,6 +3,7 @@
  * commits, recipe files or build output.
  */
 import { DEFAULT_MODEL } from "../shared/claude";
+import type { Store } from "../shared/schema";
 
 const KEY = "packet-keeper-settings-v1";
 
@@ -13,6 +14,7 @@ export interface Settings {
   githubOwner: string;
   githubRepo: string;
   githubBranch: string;
+  preferredStore: Store;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -23,6 +25,7 @@ export const DEFAULT_SETTINGS: Settings = {
   githubOwner: "hughdwill-byte",
   githubRepo: "Packet-Keeper",
   githubBranch: "main",
+  preferredStore: "coles",
 };
 
 export function loadSettings(): Settings {

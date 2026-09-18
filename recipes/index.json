@@ -4,8 +4,20 @@
     "dishName": "Buffalo Chicken",
     "product": "Buffalo Chicken Recipe Base",
     "cuisine": "American",
+    "dishType": "Main",
+    "allergens": [
+      "dairy",
+      "gluten"
+    ],
+    "dietary": [],
     "dishImage": "recipes/images/buffalo-chicken-dish.svg",
     "needsReview": true,
+    "costByStore": {
+      "aldi": 20.65,
+      "coles": 27.45,
+      "woolworths": 27.45,
+      "iga": 32.94
+    },
     "ingredientNames": [
       "chicken, cauliflower or tofu, cut into chunks",
       "brown onion, diced",
@@ -24,15 +36,28 @@
       "green capsicum, sliced",
       "Leave out the pasta & shred the chicken to create a Buffalo Chicken Cheese dip that will be perfect for entertaining!"
     ],
-    "updatedAt": "2026-09-17T12:18:21.026Z"
+    "updatedAt": "2026-09-18T03:00:54.347Z"
   },
   {
     "slug": "butter-chicken",
     "dishName": "Butter Chicken",
     "product": "Butter Chicken Recipe Base",
     "cuisine": "Indian",
+    "dishType": "Main",
+    "allergens": [
+      "dairy"
+    ],
+    "dietary": [
+      "gluten-free"
+    ],
     "dishImage": "recipes/images/butter-chicken-dish.svg",
     "needsReview": false,
+    "costByStore": {
+      "aldi": 11.13,
+      "coles": 16.86,
+      "woolworths": 16.86,
+      "iga": 20.23
+    },
     "ingredientNames": [
       "chicken, paneer or tofu, cut into chunks",
       "onion, diced",
@@ -48,15 +73,27 @@
       "Yoghurt",
       "Roasted crushed cashews"
     ],
-    "updatedAt": "2026-09-17T12:31:29.744Z"
+    "updatedAt": "2026-09-18T03:00:54.348Z"
   },
   {
     "slug": "chilli-con-carne",
     "dishName": "Chilli Con Carne",
     "product": "Chilli Con Carne Recipe Base",
     "cuisine": "Mexican",
+    "dishType": "Main",
+    "allergens": [],
+    "dietary": [
+      "gluten-free",
+      "dairy-free"
+    ],
     "dishImage": "recipes/images/chilli-con-carne-dish.svg",
     "needsReview": true,
+    "costByStore": {
+      "aldi": 8.68,
+      "coles": 14.14,
+      "woolworths": 14.14,
+      "iga": 16.97
+    },
     "ingredientNames": [
       "beef mince, chicken mince or lentils",
       "onion, diced",
@@ -72,15 +109,27 @@
       "Lime",
       "Crushed corn chips"
     ],
-    "updatedAt": "2026-09-17T12:18:21.026Z"
+    "updatedAt": "2026-09-18T03:00:54.336Z"
   },
   {
     "slug": "chow-mein",
     "dishName": "Chow Mein",
     "product": "Chow Mein Recipe Base",
     "cuisine": "Chinese",
+    "dishType": "Main",
+    "allergens": [
+      "soy",
+      "sesame"
+    ],
+    "dietary": [],
     "dishImage": "recipes/images/chow-mein-dish.svg",
     "needsReview": true,
+    "costByStore": {
+      "aldi": 8.56,
+      "coles": 14.01,
+      "woolworths": 14.01,
+      "iga": 16.81
+    },
     "ingredientNames": [
       "beef mince, pork mince or tofu",
       "cabbage, shredded",
@@ -94,15 +143,27 @@
       "Crushed peanuts",
       "Fresh coriander (if you're not a hater)"
     ],
-    "updatedAt": "2026-09-17T12:03:47.950Z"
+    "updatedAt": "2026-09-18T03:00:54.343Z"
   },
   {
     "slug": "fajita",
     "dishName": "Fajita",
     "product": "Fajita Recipe Base",
     "cuisine": "Mexican",
+    "dishType": "Main",
+    "allergens": [],
+    "dietary": [
+      "gluten-free",
+      "dairy-free"
+    ],
     "dishImage": "recipes/images/fajita-dish.svg",
     "needsReview": true,
+    "costByStore": {
+      "aldi": 9.68,
+      "coles": 15.26,
+      "woolworths": 15.26,
+      "iga": 18.31
+    },
     "ingredientNames": [
       "beef, chicken or tofu, sliced thinly",
       "onion, diced",
@@ -119,15 +180,28 @@
       "Guacamole",
       "Sour cream with lime juice & coriander mixed through"
     ],
-    "updatedAt": "2026-09-17T12:03:47.950Z"
+    "updatedAt": "2026-09-18T03:00:54.337Z"
   },
   {
     "slug": "satay",
     "dishName": "Satay Curry",
     "product": "Satay Recipe Base",
     "cuisine": "Malaysian",
+    "dishType": "Main",
+    "allergens": [
+      "peanut"
+    ],
+    "dietary": [
+      "dairy-free"
+    ],
     "dishImage": "recipes/images/satay-dish.svg",
     "needsReview": true,
+    "costByStore": {
+      "aldi": 8.42,
+      "coles": 13.86,
+      "woolworths": 13.86,
+      "iga": 16.63
+    },
     "ingredientNames": [
       "chicken, beef, pork or tofu, cut into chunks",
       "onion, diced",
@@ -142,15 +216,27 @@
       "Lime",
       "Toasted crushed peanuts"
     ],
-    "updatedAt": "2026-09-17T12:18:21.026Z"
+    "updatedAt": "2026-09-18T03:00:54.344Z"
   },
   {
     "slug": "smoky-mexican",
     "dishName": "Smoky Mexican",
     "product": "Smoky Mexican Recipe Base",
     "cuisine": "Mexican",
+    "dishType": "Main",
+    "allergens": [],
+    "dietary": [
+      "gluten-free",
+      "dairy-free"
+    ],
     "dishImage": "recipes/images/smoky-mexican-dish.svg",
     "needsReview": false,
+    "costByStore": {
+      "aldi": 6.53,
+      "coles": 11.76,
+      "woolworths": 11.76,
+      "iga": 14.11
+    },
     "ingredientNames": [
       "beef mince, chicken mince or lentils",
       "onion, diced",
@@ -165,15 +251,26 @@
       "Guacamole",
       "Sour cream with lime juice & coriander mixed through"
     ],
-    "updatedAt": "2026-09-17T12:03:47.950Z"
+    "updatedAt": "2026-09-18T03:00:54.332Z"
   },
   {
     "slug": "spaghetti-bolognese",
     "dishName": "Spaghetti Bolognese",
     "product": "Spaghetti Bolognese Recipe Base",
     "cuisine": "Italian",
+    "dishType": "Main",
+    "allergens": [],
+    "dietary": [
+      "dairy-free"
+    ],
     "dishImage": "recipes/images/spaghetti-bolognese-dish.svg",
     "needsReview": false,
+    "costByStore": {
+      "aldi": 8.71,
+      "coles": 14.17,
+      "woolworths": 14.17,
+      "iga": 17
+    },
     "ingredientNames": [
       "beef, chicken or plant based mince alternatives (lentils work well)",
       "onion, diced",
@@ -188,15 +285,27 @@
       "Parmesan, grated",
       "milk - see step 3"
     ],
-    "updatedAt": "2026-09-17T12:03:47.950Z"
+    "updatedAt": "2026-09-18T03:00:54.339Z"
   },
   {
     "slug": "sri-lankan-curry",
     "dishName": "Sri Lankan Coconut Curry",
     "product": "Sri Lankan Recipe Base",
     "cuisine": "Sri Lankan",
+    "dishType": "Main",
+    "allergens": [],
+    "dietary": [
+      "gluten-free",
+      "dairy-free"
+    ],
     "dishImage": "recipes/images/sri-lankan-curry-dish.svg",
     "needsReview": false,
+    "costByStore": {
+      "aldi": 10.07,
+      "coles": 15.69,
+      "woolworths": 15.69,
+      "iga": 18.83
+    },
     "ingredientNames": [
       "chicken, prawns or paneer, cut into chunks",
       "tomatoes, diced",
@@ -211,15 +320,26 @@
       "Crispy curry leaves (cook curry leaves in hot oil for 45 seconds)",
       "Crushed peanuts"
     ],
-    "updatedAt": "2026-09-17T12:18:21.026Z"
+    "updatedAt": "2026-09-18T03:00:54.346Z"
   },
   {
     "slug": "stroganoff",
     "dishName": "Stroganoff",
     "product": "Stroganoff Recipe Base",
     "cuisine": "Hungarian",
+    "dishType": "Main",
+    "allergens": [
+      "dairy"
+    ],
+    "dietary": [],
     "dishImage": "recipes/images/stroganoff-dish.svg",
     "needsReview": false,
+    "costByStore": {
+      "aldi": 12.33,
+      "coles": 18.2,
+      "woolworths": 18.2,
+      "iga": 21.85
+    },
     "ingredientNames": [
       "beef, chicken or tofu strips",
       "onion, diced",
@@ -233,15 +353,27 @@
       "Egg noodles or bow tie pasta",
       "Chives, chopped"
     ],
-    "updatedAt": "2026-09-17T12:03:47.950Z"
+    "updatedAt": "2026-09-18T03:00:54.341Z"
   },
   {
     "slug": "taco",
     "dishName": "Taco",
     "product": "Taco Recipe Base",
     "cuisine": "Mexican",
+    "dishType": "Main",
+    "allergens": [],
+    "dietary": [
+      "gluten-free",
+      "dairy-free"
+    ],
     "dishImage": "recipes/images/taco-dish.svg",
     "needsReview": true,
+    "costByStore": {
+      "aldi": 6.53,
+      "coles": 11.76,
+      "woolworths": 11.76,
+      "iga": 14.11
+    },
     "ingredientNames": [
       "beef mince, chicken mince or lentils",
       "onion, diced",
@@ -256,6 +388,6 @@
       "Guacamole",
       "Sour cream with lime juice & coriander mixed through"
     ],
-    "updatedAt": "2026-09-17T12:18:21.026Z"
+    "updatedAt": "2026-09-18T03:00:54.334Z"
   }
 ]

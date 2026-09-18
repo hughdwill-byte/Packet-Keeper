@@ -3,6 +3,7 @@
   "product": "Chow Mein Recipe Base",
   "brand": "Mingle",
   "cuisine": "Chinese",
+  "dishType": "Main",
   "serves": "4",
   "prepTime": "5 mins",
   "cookTime": "25 mins",
@@ -135,6 +136,90 @@
     "Olive Oil",
     "Natural Sweetener (Monk Fruit)"
   ],
+  "allergens": [
+    "soy",
+    "sesame"
+  ],
+  "dietary": [],
+  "shoppingList": [
+    {
+      "name": "Beef mince",
+      "stapleKey": "beef_mince",
+      "quantity": 500,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Cabbage",
+      "stapleKey": "cabbage",
+      "quantity": 0.5,
+      "unit": "each",
+      "optional": false
+    },
+    {
+      "name": "Carrot",
+      "stapleKey": "carrot",
+      "quantity": 1,
+      "unit": "each",
+      "optional": false
+    },
+    {
+      "name": "Rice",
+      "stapleKey": "rice",
+      "quantity": 100,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Chicken stock",
+      "stapleKey": "chicken_stock",
+      "quantity": 500,
+      "unit": "ml",
+      "optional": false
+    },
+    {
+      "name": "Mingle recipe base sachet",
+      "stapleKey": "recipe_base",
+      "quantity": 30,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Capsicum",
+      "stapleKey": "green_capsicum",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Zucchini",
+      "stapleKey": "zucchini",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Spring onions",
+      "stapleKey": "spring_onion",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Peanuts",
+      "stapleKey": "peanuts",
+      "quantity": 50,
+      "unit": "g",
+      "optional": true
+    },
+    {
+      "name": "Coriander",
+      "stapleKey": "coriander",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    }
+  ],
   "confidence": [
     {
       "field": "method",
@@ -205,7 +290,14 @@
     "recipes/images/chow-mein-1.jpg"
   ],
   "dishImage": "recipes/images/chow-mein-dish.svg",
+  "dishImageFromPhoto": false,
+  "costByStore": {
+    "aldi": 8.56,
+    "coles": 14.01,
+    "woolworths": 14.01,
+    "iga": 16.81
+  },
   "needsReview": true,
   "createdAt": "2026-09-17T12:03:47.950Z",
-  "updatedAt": "2026-09-17T12:03:47.950Z"
+  "updatedAt": "2026-09-18T03:00:54.343Z"
 }

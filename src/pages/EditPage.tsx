@@ -2,6 +2,8 @@ import { useEffect, useMemo, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { getRecipe, saveRecipe, type Recipe } from "../lib/recipes";
 import { loadSettings, hasGithubConfig } from "../lib/settings";
+import { loadPriceBook } from "../lib/priceBook";
+import { costByStore as computeCostByStore } from "../shared/prices";
 import type { IngredientGroup, MethodStep, NutritionRow } from "../shared/schema";
 
 const input = "w-full rounded-lg border border-orange-200 bg-white px-3 py-2 text-sm outline-none focus:border-brand-500";
@@ -34,7 +36,13 @@ export default function EditPage() {
     setSaving(true);
     setError("");
     try {
-      await saveRecipe(settings, { ...r, needsReview: false });
+      // Recompute cost from the (possibly refreshed) price list on save.
+      let costByStore = r.costByStore;
+      try {
+        const book = await loadPriceBook();
+        costByStore = computeCostByStore(r.shoppingList, book);
+      } catch { /* keep existing costs */ }
+      await saveRecipe(settings, { ...r, costByStore, needsReview: false });
       navigate(`/recipe/${r.slug}`);
     } catch (e) {
       setError((e as Error).message);
@@ -74,6 +82,9 @@ export default function EditPage() {
           <div><span className={label}>Prep time</span><input className={input} value={r.prepTime} onChange={(e) => set({ prepTime: e.target.value })} /></div>
           <div><span className={label}>Cook time</span><input className={input} value={r.cookTime} onChange={(e) => set({ cookTime: e.target.value })} /></div>
         </div>
+        <div><span className={label}>Dish type</span><input className={input} placeholder="Main / Dessert / Side…" value={r.dishType} onChange={(e) => set({ dishType: e.target.value })} /></div>
+        <div><span className={label}>Diet tags (comma-separated)</span><input className={input} placeholder="vegetarian, gluten-free…" value={r.dietary.join(", ")} onChange={(e) => set({ dietary: e.target.value.split(",").map((x) => x.trim()).filter(Boolean) })} /></div>
+        <div><span className={label}>Contains allergens (comma-separated)</span><input className={input} placeholder="gluten, dairy, nuts…" value={r.allergens.join(", ")} onChange={(e) => set({ allergens: e.target.value.split(",").map((x) => x.trim()).filter(Boolean) })} /></div>
       </div>
 
       {/* Ingredient groups */}

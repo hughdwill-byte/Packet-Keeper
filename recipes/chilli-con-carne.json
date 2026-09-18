@@ -3,6 +3,7 @@
   "product": "Chilli Con Carne Recipe Base",
   "brand": "Mingle",
   "cuisine": "Mexican",
+  "dishType": "Main",
   "serves": "4",
   "prepTime": "5 mins",
   "cookTime": "25 mins",
@@ -172,6 +173,111 @@
     "Chipotle",
     "Olive Oil"
   ],
+  "allergens": [],
+  "dietary": [
+    "gluten-free",
+    "dairy-free"
+  ],
+  "shoppingList": [
+    {
+      "name": "Beef mince",
+      "stapleKey": "beef_mince",
+      "quantity": 500,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Onion",
+      "stapleKey": "onion",
+      "quantity": 1,
+      "unit": "each",
+      "optional": false
+    },
+    {
+      "name": "Black beans",
+      "stapleKey": "black_beans",
+      "quantity": 400,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Beef stock",
+      "stapleKey": "beef_stock",
+      "quantity": 250,
+      "unit": "ml",
+      "optional": false
+    },
+    {
+      "name": "Tomato paste",
+      "stapleKey": "tomato_paste",
+      "quantity": 30,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Tinned tomatoes",
+      "stapleKey": "tinned_tomatoes",
+      "quantity": 400,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Mingle recipe base sachet",
+      "stapleKey": "recipe_base",
+      "quantity": 30,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "Zucchini",
+      "stapleKey": "zucchini",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Green capsicum",
+      "stapleKey": "green_capsicum",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Rice",
+      "stapleKey": "rice",
+      "quantity": 200,
+      "unit": "g",
+      "optional": true
+    },
+    {
+      "name": "Grated cheese",
+      "stapleKey": "cheese_grated",
+      "quantity": 100,
+      "unit": "g",
+      "optional": true
+    },
+    {
+      "name": "Sour cream",
+      "stapleKey": "sour_cream",
+      "quantity": 50,
+      "unit": "g",
+      "optional": true
+    },
+    {
+      "name": "Lime",
+      "stapleKey": "lime",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    },
+    {
+      "name": "Corn chips",
+      "stapleKey": "corn_chips",
+      "quantity": 50,
+      "unit": "g",
+      "optional": true
+    }
+  ],
   "confidence": [
     {
       "field": "method",
@@ -252,7 +358,14 @@
     "recipes/images/chilli-con-carne-1.jpg"
   ],
   "dishImage": "recipes/images/chilli-con-carne-dish.svg",
+  "dishImageFromPhoto": false,
+  "costByStore": {
+    "aldi": 8.68,
+    "coles": 14.14,
+    "woolworths": 14.14,
+    "iga": 16.97
+  },
   "needsReview": true,
   "createdAt": "2026-09-17T12:18:21.026Z",
-  "updatedAt": "2026-09-17T12:18:21.026Z"
+  "updatedAt": "2026-09-18T03:00:54.336Z"
 }
