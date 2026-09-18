@@ -61,6 +61,7 @@ export default function App() {
       >
         <TabLink to="/" label="Recipes" icon="📖" />
         <TabLink to="/upload" label="Add" icon="📷" />
+        <TabLink to="/prices" label="Prices" icon="🛒" />
         <TabLink to="/settings" label="Settings" icon="⚙️" />
       </nav>
     </div>

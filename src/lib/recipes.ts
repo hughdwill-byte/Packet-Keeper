@@ -16,6 +16,7 @@ import {
 import type { Settings } from "./settings";
 import * as gh from "./github";
 import { blobToBase64 } from "./base64";
+import { costByStore as computeCostByStore, type PriceBook } from "../shared/prices";
 import {
   cacheGetIndex,
   cacheSetIndex,
@@ -161,6 +162,26 @@ export async function deleteRecipe(s: Settings, slug: string): Promise<void> {
     `Remove ${slug} from index`,
   );
   await cacheDeleteRecipe(slug);
+}
+
+/**
+ * Recompute every recipe's cost-to-make from a (freshly edited) price book and
+ * commit the updates. One commit per recipe — use sparingly, after a price update.
+ */
+export async function recomputeAllCosts(
+  s: Settings,
+  book: PriceBook,
+  onProgress?: (slug: string, i: number, total: number) => void,
+): Promise<number> {
+  const index = await loadIndex();
+  let n = 0;
+  for (const e of index) {
+    const r = await getRecipe(e.slug, s);
+    if (!r) continue;
+    await saveRecipe(s, { ...r, costByStore: computeCostByStore(r.shoppingList, book) });
+    onProgress?.(e.slug, ++n, index.length);
+  }
+  return n;
 }
 
 /** Full-text-ish search over the index (name, product, cuisine, ingredients). */

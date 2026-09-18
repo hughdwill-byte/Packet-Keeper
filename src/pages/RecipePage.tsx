@@ -9,6 +9,7 @@ import { blobToBase64 } from "../lib/base64";
 import { loadPriceBook, stapleKeysOf } from "../lib/priceBook";
 import { buildShoppingList, costByStore as computeCostByStore, formatAUD, type PriceBook } from "../shared/prices";
 import { STORES, STORE_LABELS, type Store } from "../shared/schema";
+import { trolleySearchUrl } from "../shared/util";
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -160,7 +161,7 @@ export default function RecipePage() {
               <ul className="divide-y divide-orange-50">
                 {shopping.lines.map((l, i) => (
                   <li key={i} className="flex items-start justify-between gap-2 py-1.5 text-sm">
-                    <span className={l.optional ? "text-stone-500" : ""}>
+                    <span className={l.optional ? "min-w-0 text-stone-500" : "min-w-0"}>
                       {l.unknown ? (
                         <span>{l.name} <span className="text-[10px] uppercase text-amber-600">price n/a</span></span>
                       ) : (
@@ -170,6 +171,7 @@ export default function RecipePage() {
                           {l.optional && <span className="ml-1 text-[10px] uppercase text-stone-400">optional</span>}
                         </>
                       )}
+                      <a href={trolleySearchUrl(l.name)} target="_blank" rel="noreferrer" className="ml-1 whitespace-nowrap text-[11px] text-brand-600 underline">check ↗</a>
                     </span>
                     {!l.unknown && <span className="whitespace-nowrap font-medium">{formatAUD(l.lineCost)}</span>}
                   </li>
@@ -179,8 +181,16 @@ export default function RecipePage() {
                 <span>Estimated shop total</span>
                 <span className="text-green-700">{formatAUD(shopping.total)}</span>
               </div>
+              <a
+                href="https://trolleychecker.com.au/"
+                target="_blank"
+                rel="noreferrer"
+                className="mt-2 block rounded-lg border border-brand-300 py-2 text-center text-sm font-semibold text-brand-700"
+              >
+                Compare live prices on Trolley Checker ↗
+              </a>
               <p className="mt-1 text-[10px] text-stone-400">
-                Whole packs at {STORE_LABELS[store]} estimated prices. A guide only — check in store.
+                Whole packs at {STORE_LABELS[store]} estimated prices — a guide only. Tap “check” for today's live price on Trolley Checker.
               </p>
             </>
           )}

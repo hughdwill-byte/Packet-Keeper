@@ -1,5 +1,13 @@
 /** Small pure helpers shared by app + import script. */
 
+/**
+ * Live price lookup on Trolley Checker (opens in a new tab — no scraping).
+ * Central so the search path is easy to adjust if their URL scheme differs.
+ */
+export function trolleySearchUrl(term: string): string {
+  return `https://trolleychecker.com.au/search?q=${encodeURIComponent(term)}`;
+}
+
 export function slugify(input: string): string {
   return (input || "")
     .toLowerCase()
