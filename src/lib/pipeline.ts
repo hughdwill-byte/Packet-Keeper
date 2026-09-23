@@ -97,6 +97,7 @@ async function buildAndSave(
     dishImage,
     dishImageFromPhoto,
     costByStore: computeCostByStore(ex.shoppingList, book),
+    cookLog: [],
     needsReview,
     createdAt: now,
     updatedAt: now,

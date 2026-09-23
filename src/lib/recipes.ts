@@ -143,6 +143,7 @@ export async function deleteRecipe(s: Settings, slug: string): Promise<void> {
   const imagePaths = new Set<string>();
   if (recipe) {
     recipe.images.forEach((p) => imagePaths.add(p));
+    recipe.cookLog.forEach((c) => imagePaths.add(c.photo));
     if (recipe.dishImage) imagePaths.add(recipe.dishImage);
   }
   for (const p of imagePaths) {

@@ -71,6 +71,13 @@ export default function HomePage() {
 
   const activeFilterCount = dishTypes.length + cuisines.length + diets.length + excludeAllergens.length;
 
+  const cookStats = useMemo(() => {
+    const src = index ?? [];
+    const total = src.reduce((n, e) => n + (e.cookCount || 0), 0);
+    const top = src.filter((e) => (e.cookCount || 0) > 0).sort((a, b) => (b.cookCount || 0) - (a.cookCount || 0))[0];
+    return { total, top };
+  }, [index]);
+
   return (
     <div>
       <div className="mb-3 space-y-2">
@@ -138,6 +145,14 @@ export default function HomePage() {
       )}
 
       {error && <p className="rounded-lg bg-red-50 p-3 text-sm text-red-700">{error}</p>}
+
+      {cookStats.total > 0 && (
+        <p className="mb-3 rounded-xl bg-green-50 px-3 py-2 text-sm text-green-800">
+          🍳 <b>{cookStats.total}</b> meal{cookStats.total !== 1 ? "s" : ""} cooked
+          {cookStats.top && <> · most‑made: <b>{cookStats.top.dishName}</b> (×{cookStats.top.cookCount})</>}
+        </p>
+      )}
+
       {index === null && <p className="text-stone-500">Loading recipes…</p>}
 
       {index !== null && index.length === 0 && (
@@ -162,11 +177,16 @@ export default function HomePage() {
               to={`/recipe/${r.slug}`}
               className="overflow-hidden rounded-2xl border border-orange-100 bg-white shadow-sm active:scale-[0.98]"
             >
-              <div className="aspect-square w-full bg-orange-100">
+              <div className="relative aspect-square w-full bg-orange-100">
                 {r.dishImage ? (
                   <img src={assetUrl(r.dishImage)} alt={r.dishName} className="h-full w-full object-cover" loading="lazy" />
                 ) : (
                   <div className="flex h-full w-full items-center justify-center text-5xl">🍽️</div>
+                )}
+                {(r.cookCount || 0) > 0 && (
+                  <span className="absolute right-1 top-1 rounded-full bg-black/60 px-1.5 py-0.5 text-[10px] font-bold text-white">
+                    🍳 {r.cookCount}
+                  </span>
                 )}
               </div>
               <div className="p-2">

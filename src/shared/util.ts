@@ -8,6 +8,20 @@ export function trolleySearchUrl(term: string): string {
   return `https://trolleychecker.com.au/search?q=${encodeURIComponent(term)}`;
 }
 
+/** Friendly relative date like "today", "3 days ago", "2 months ago". */
+export function relativeDate(iso: string): string {
+  if (!iso) return "";
+  const then = new Date(iso).getTime();
+  if (Number.isNaN(then)) return "";
+  const days = Math.floor((Date.now() - then) / 86400000);
+  if (days <= 0) return "today";
+  if (days === 1) return "yesterday";
+  if (days < 7) return `${days} days ago`;
+  if (days < 30) return `${Math.floor(days / 7)} week${days < 14 ? "" : "s"} ago`;
+  if (days < 365) return `${Math.floor(days / 30)} month${days < 60 ? "" : "s"} ago`;
+  return `${Math.floor(days / 365)} year${days < 730 ? "" : "s"} ago`;
+}
+
 export function slugify(input: string): string {
   return (input || "")
     .toLowerCase()

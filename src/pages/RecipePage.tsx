@@ -1,15 +1,17 @@
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { getRecipe, saveRecipe, deleteRecipe, type Recipe } from "../lib/recipes";
+import { getRecipe, saveRecipe, deleteRecipe, type Recipe, type ImageUpload } from "../lib/recipes";
+import { deleteFile } from "../lib/github";
 import { assetUrl } from "../lib/assets";
 import { loadSettings, hasClaudeConfig, hasGithubConfig } from "../lib/settings";
 import { generateDishImage } from "../lib/dishImage";
+import { compressImage } from "../lib/image";
 import { extractRecipes, generateSpiceBlend, type ImagePart } from "../shared/claude";
 import { blobToBase64 } from "../lib/base64";
 import { loadPriceBook, stapleKeysOf } from "../lib/priceBook";
 import { buildShoppingList, costByStore as computeCostByStore, formatAUD, type PriceBook } from "../shared/prices";
-import { STORES, STORE_LABELS, type Store } from "../shared/schema";
-import { trolleySearchUrl } from "../shared/util";
+import { STORES, STORE_LABELS, type Store, type CookEntry } from "../shared/schema";
+import { trolleySearchUrl, relativeDate } from "../shared/util";
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -17,6 +19,15 @@ function Section({ title, children }: { title: string; children: React.ReactNode
       <h2 className="mb-2 text-lg font-bold text-brand-700">{title}</h2>
       {children}
     </section>
+  );
+}
+
+function Stat({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-xl bg-orange-100 p-2">
+      <p className="text-lg font-extrabold leading-tight text-brand-700">{value}</p>
+      <p className="text-[10px] uppercase tracking-wide text-stone-500">{label}</p>
+    </div>
   );
 }
 
@@ -32,6 +43,7 @@ export default function RecipePage() {
   const [busy, setBusy] = useState("");
   const [error, setError] = useState("");
   const [confirmDelete, setConfirmDelete] = useState(false);
+  const cookInput = useRef<HTMLInputElement>(null);
 
   useEffect(() => {
     getRecipe(slug, settings).then(setRecipe).catch((e) => setError((e as Error).message)).finally(() => setLoading(false));
@@ -95,6 +107,59 @@ export default function RecipePage() {
     } catch (e) { setError((e as Error).message); } finally { setBusy(""); }
   }
 
+  async function onCookPhoto(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+    if (!file || !recipe) return;
+    if (!canWrite) { setError("Add your GitHub token in Settings to save photos."); return; }
+    setBusy("Saving your cook photo…"); setError("");
+    try {
+      const c = await compressImage(file);
+      const path = `recipes/images/${recipe.slug}-cook-${Date.now()}.jpg`;
+      const entry: CookEntry = { photo: path, date: new Date().toISOString(), note: "" };
+      // Newest cook becomes the cover/title image.
+      const saved = await saveRecipe(
+        settings,
+        { ...recipe, cookLog: [...recipe.cookLog, entry], dishImage: path, dishImageFromPhoto: true },
+        [{ path, blob: c.blob }],
+      );
+      setRecipe(saved);
+    } catch (e) { setError((e as Error).message); } finally { setBusy(""); }
+  }
+
+  async function setCover(path: string) {
+    if (!recipe) return;
+    setBusy("Updating cover…"); setError("");
+    try {
+      setRecipe(await saveRecipe(settings, { ...recipe, dishImage: path, dishImageFromPhoto: true }));
+    } catch (e) { setError((e as Error).message); } finally { setBusy(""); }
+  }
+
+  async function removeCook(entry: CookEntry) {
+    if (!recipe) return;
+    setBusy("Removing photo…"); setError("");
+    try {
+      const cookLog = recipe.cookLog.filter((c) => c.photo !== entry.photo);
+      // If we removed the cover, fall back to the newest remaining cook photo, else an emoji tile.
+      let dishImage = recipe.dishImage;
+      let dishImageFromPhoto = recipe.dishImageFromPhoto;
+      const uploads: ImageUpload[] = [];
+      if (recipe.dishImage === entry.photo) {
+        if (cookLog.length) {
+          dishImage = cookLog[cookLog.length - 1].photo;
+          dishImageFromPhoto = true;
+        } else {
+          dishImage = `recipes/images/${recipe.slug}-dish.svg`;
+          dishImageFromPhoto = false;
+          uploads.push({ path: dishImage, blob: generateDishImage(recipe).blob });
+        }
+      }
+      const saved = await saveRecipe(settings, { ...recipe, cookLog, dishImage, dishImageFromPhoto }, uploads);
+      setRecipe(saved);
+      try { await deleteFile(settings, entry.photo, `Remove cook photo ${entry.photo}`); } catch { /* best effort */ }
+    } catch (e) { setError((e as Error).message); } finally { setBusy(""); }
+  }
+
   async function doDelete() {
     if (!recipe) return;
     setBusy("Deleting…");
@@ -112,6 +177,10 @@ export default function RecipePage() {
     );
 
   const cost = recipe.costByStore?.[store] ?? 0;
+  const cooks = recipe.cookLog;
+  const lastCooked = cooks.reduce((m, c) => (c.date > m ? c.date : m), "");
+  const firstCooked = cooks.reduce((m, c) => (!m || c.date < m ? c.date : m), "");
+  const cookedThisYear = cooks.filter((c) => new Date(c.date).getFullYear() === new Date().getFullYear()).length;
 
   return (
     <div>
@@ -138,6 +207,62 @@ export default function RecipePage() {
 
       {busy && <p className="mb-3 rounded-lg bg-blue-50 p-2 text-sm text-blue-700">{busy}</p>}
       {error && <p className="mb-3 rounded-lg bg-red-50 p-2 text-sm text-red-700">{error}</p>}
+
+      {/* Cook journal */}
+      <Section title="Cook journal 🍳">
+        <input ref={cookInput} type="file" accept="image/*" capture="environment" className="hidden" onChange={onCookPhoto} />
+        <button
+          onClick={() => cookInput.current?.click()}
+          disabled={!canWrite || !!busy}
+          className="mb-3 w-full rounded-xl bg-green-600 py-3 text-base font-semibold text-white active:scale-[0.99] disabled:opacity-40"
+        >
+          {cooks.length ? "🍳 Cooked it again — add a photo" : "🍳 I cooked this — add a photo"}
+        </button>
+
+        {cooks.length === 0 ? (
+          <p className="text-sm text-stone-500">
+            No cook photos yet. Snap your plate after you make it — the newest becomes the cover, and your count &
+            stats build up here.
+          </p>
+        ) : (
+          <>
+            <div className="mb-3 grid grid-cols-3 gap-2 text-center">
+              <Stat label="Times cooked" value={String(cooks.length)} />
+              <Stat label="Last cooked" value={relativeDate(lastCooked) || "—"} />
+              <Stat label="This year" value={String(cookedThisYear)} />
+            </div>
+            <p className="mb-2 text-xs text-stone-500">
+              {cooks.length >= 5 ? "🔥 A house favourite!" : cooks.length >= 3 ? "⭐ Becoming a regular." : "🍽️ First few cooks logged."}
+              {firstCooked && ` First made ${new Date(firstCooked).toLocaleDateString()}.`}
+            </p>
+            <div className="grid grid-cols-3 gap-2">
+              {[...cooks].reverse().map((c) => {
+                const isCover = recipe.dishImage === c.photo;
+                return (
+                  <div key={c.photo} className="overflow-hidden rounded-lg border border-orange-100 bg-white">
+                    <a href={assetUrl(c.photo)} target="_blank" rel="noreferrer">
+                      <img src={assetUrl(c.photo)} alt={`Cooked ${new Date(c.date).toLocaleDateString()}`} className="aspect-square w-full object-cover" loading="lazy" />
+                    </a>
+                    <div className="px-1.5 pb-1 pt-0.5">
+                      <p className="truncate text-[10px] text-stone-500">{new Date(c.date).toLocaleDateString()}</p>
+                      <div className="flex items-center justify-between">
+                        <button
+                          onClick={() => setCover(c.photo)}
+                          disabled={isCover || !canWrite || !!busy}
+                          className={`text-[11px] font-medium ${isCover ? "text-amber-500" : "text-brand-600 disabled:opacity-40"}`}
+                        >
+                          {isCover ? "★ cover" : "set cover"}
+                        </button>
+                        <button onClick={() => removeCook(c)} disabled={!canWrite || !!busy} className="text-[11px] text-red-400 disabled:opacity-40">✕</button>
+                      </div>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </>
+        )}
+      </Section>
 
       {/* Cost + shopping list */}
       <Section title="Cost & shopping list">

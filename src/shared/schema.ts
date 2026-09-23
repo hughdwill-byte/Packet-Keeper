@@ -84,6 +84,14 @@ export type DishPhoto = z.infer<typeof DishPhotoSchema>;
 export const CostByStoreSchema = z.record(z.enum(STORES), z.number()).default({});
 export type CostByStore = z.infer<typeof CostByStoreSchema>;
 
+/** One "I cooked this" entry: a photo of the meal you actually made. */
+export const CookEntrySchema = z.object({
+  photo: z.string(), // repo-relative image path
+  date: z.string(), // ISO timestamp
+  note: z.string().optional().default(""),
+});
+export type CookEntry = z.infer<typeof CookEntrySchema>;
+
 /**
  * What Claude returns for a single recipe. Kept separate from the stored
  * Recipe so we can validate the model output on its own.
@@ -121,6 +129,7 @@ export const RecipeSchema = ExtractionSchema.extend({
   dishImage: z.string().optional().default(""), // dish photo crop or emoji tile
   dishImageFromPhoto: z.boolean().optional().default(false),
   costByStore: CostByStoreSchema, // proportional cost-to-make estimate per store
+  cookLog: z.array(CookEntrySchema).default([]), // photos of times you cooked it
   needsReview: z.boolean().default(false),
   createdAt: z.string(),
   updatedAt: z.string(),
@@ -138,6 +147,8 @@ export const IndexEntrySchema = z.object({
   dishImage: z.string().default(""),
   needsReview: z.boolean().default(false),
   costByStore: CostByStoreSchema,
+  cookCount: z.number().default(0),
+  lastCooked: z.string().default(""),
   // flattened ingredient names to make search cheap without loading each file
   ingredientNames: z.array(z.string()).default([]),
   updatedAt: z.string(),
@@ -152,6 +163,8 @@ export function toIndexEntry(r: Recipe): IndexEntry {
   const ingredientNames = r.ingredientGroups
     .flatMap((g) => g.items.map((i) => i.name))
     .filter(Boolean);
+  const cookLog = r.cookLog ?? [];
+  const lastCooked = cookLog.reduce((max, c) => (c.date > max ? c.date : max), "");
   return {
     slug: r.slug,
     dishName: r.dishName,
@@ -163,6 +176,8 @@ export function toIndexEntry(r: Recipe): IndexEntry {
     dishImage: r.dishImage ?? "",
     needsReview: r.needsReview,
     costByStore: r.costByStore ?? {},
+    cookCount: cookLog.length,
+    lastCooked,
     ingredientNames,
     updatedAt: r.updatedAt,
   };
