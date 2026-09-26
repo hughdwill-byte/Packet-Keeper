@@ -315,7 +315,11 @@ export default function RecipePage() {
                 Compare live prices on Trolley Checker ↗
               </a>
               <p className="mt-1 text-[10px] text-stone-400">
-                Whole packs at {STORE_LABELS[store]} estimated prices — a guide only. Tap “check” for today's live price on Trolley Checker.
+                Whole packs at {STORE_LABELS[store]}{" "}
+                {book?.storeStatus?.[store]?.ok
+                  ? `live prices (updated ${book.storeStatus[store]?.lastSuccess || "recently"})`
+                  : "estimated prices"}
+                {" "}— a guide only. Tap “check” for today's price on Trolley Checker.
               </p>
             </>
           )}

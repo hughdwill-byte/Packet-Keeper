@@ -1,0 +1,18 @@
+{
+  "iga": {
+    "storeId": "melbourne-cbd",
+    "comment": "IGA is per-store. Set this to your local IGA's storefront slug/id (from igashop.com.au). Default is a Melbourne-area store."
+  },
+  "aldi": {
+    "servicePoint": "G452",
+    "serviceType": "walk-in",
+    "comment": "ALDI service point (store). ALDI AU only lists a limited online range; fresh produce is mostly unavailable."
+  },
+  "politeness": {
+    "minDelayMs": 1000,
+    "maxDelayMs": 3000,
+    "timeoutMsPerRequest": 20000,
+    "hardTimeoutMsPerStore": 240000,
+    "maxRetries": 2
+  }
+}

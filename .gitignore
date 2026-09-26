@@ -13,3 +13,6 @@ dist
 .DS_Store
 *.log
 .vscode
+
+# generated price-updater report (uploaded as a workflow artifact)
+scripts/output/

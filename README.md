@@ -119,18 +119,45 @@ commits `./samples/`.
   IGA**) to see an estimated **cost to make** and a **shopping list of suggested
   products** (whole packs + a total). Costs come from `recipes/prices.json`.
 
-### About the prices (important)
+### About the prices
 
-Prices are **estimates**, stored in `recipes/prices.json`, **not scraped live**.
-Live direct‑from‑browser pricing isn't possible from a static site (CORS +
-supermarket bot‑protection + terms of service), and ALDI/IGA barely publish prices
-online. ALDI & IGA figures are estimates; IGA varies by store; ALDI cost excludes
-items ALDI doesn't stock (e.g. the Mingle sachet).
+Prices live in `recipes/prices.json` and are **updated automatically every day** by
+a GitHub Actions workflow (`.github/workflows/update-prices.yml`, ~4am Melbourne).
+It can't run in the browser (CORS + supermarket bot‑protection), so it runs on
+GitHub's servers, which have open internet, and commits the results.
 
-**To refresh prices:** edit `recipes/prices.json` (each staple has a per‑store
-`price` and `product`), commit, and push. Re‑open a recipe and hit **Save** in the
-editor to recompute its cost, or costs recompute automatically the next time a
-recipe is saved.
+**How a day's run works** (`scripts/update-prices.ts`, run locally with `npm run prices`):
+1. A per‑store adapter (`scripts/stores/{woolworths,coles,aldi,iga}.ts`) searches
+   each staple, picks the best match (home brand, closest size to the staple's
+   `pack`, in stock, not a multipack) and saves its `productId` so future runs
+   price the *same* product.
+2. The product's price is **normalised to the staple's pack** (e.g. $/kg × pack g).
+3. Each `stores[store]` entry gets `productId`, `url`, `size`, `unitPrice`,
+   `onSpecial`, `wasPrice`, `lastChecked`, and `source: "live"`.
+4. Every recipe's `costByStore` and `recipes/index.json` are recomputed.
+5. The site redeploys (the update workflow calls `deploy.yml`).
+
+**Reality check — which stores actually work:** ALDI and IGA expose JSON APIs (ALDI's
+online range is limited; IGA is per‑store — set your store in
+`scripts/stores/config.json`). Woolworths sits behind Akamai and Coles behind
+Imperva; the adapters use Playwright with a warm‑up visit, but **Coles in
+particular is often blocked from GitHub's datacenter IPs** and will simply keep the
+last good price. See the per‑store status in the app's **Prices** tab and the
+`match-report.md` artifact on each run.
+
+**Safety:** a failed store never zeroes a price (the previous value + date are
+kept); a jump of more than ±60% is rejected and logged; `updatedAt` and
+`storeStatus` record each run.
+
+**Fixing a bad match:** open `recipes/prices.json` and edit that store's
+`productId` (to pin the right product) or `searchTerm` (to change what's searched),
+then commit — or set `"locked": true` (or tap 🔒 in the **Prices** tab) to freeze a
+manual price so the daily run never overwrites it. `recipe_base` and unmatched
+items are left untouched. The `scripts/output/match-report.md` artifact from each
+run lists every chosen product so you can spot mismatches.
+
+**Run it manually:** GitHub → **Actions → Update prices → Run workflow**. You can
+still edit prices by hand in the **Prices** tab and hit **Recompute recipe costs**.
 
 ## Project layout
 

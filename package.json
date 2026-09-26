@@ -8,7 +8,8 @@
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "import": "tsx scripts/import-samples.ts"
+    "import": "tsx scripts/import-samples.ts",
+    "prices": "tsx scripts/update-prices.ts"
   },
   "dependencies": {
     "idb-keyval": "^6.2.1",
@@ -24,6 +25,7 @@
     "@vitejs/plugin-react": "^4.3.1",
     "autoprefixer": "^10.4.20",
     "dotenv": "^16.4.5",
+    "playwright": "^1.47.2",
     "postcss": "^8.4.47",
     "sharp": "^0.33.5",
     "tailwindcss": "^3.4.13",

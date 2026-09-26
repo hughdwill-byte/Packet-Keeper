@@ -4,6 +4,14 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+  # Called by update-prices.yml after a successful daily price update, so the
+  # site rebuilds with the new prices (GITHUB_TOKEN pushes don't trigger `push`).
+  workflow_call:
+    inputs:
+      ref:
+        description: Git ref to build and deploy
+        type: string
+        default: main
 
 permissions:
   contents: read
@@ -20,6 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref || github.ref }}
 
       - uses: actions/setup-node@v4
         with:

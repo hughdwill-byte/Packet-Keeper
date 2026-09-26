@@ -1,0 +1,82 @@
+name: Update prices
+
+on:
+  schedule:
+    # ~4:23am Melbourne. Cron is UTC; AEST=UTC+10 / AEDT=UTC+11, so this lands
+    # 4:23 (AEST) or 3:23 (AEDT). Odd minute to avoid the top-of-hour rush.
+    - cron: "23 17 * * *"
+  workflow_dispatch:
+
+# Needed to commit prices AND (via the called deploy workflow) publish Pages.
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+concurrency:
+  group: update-prices
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    outputs:
+      changed: ${{ steps.commit.outputs.changed }}
+    steps:
+      # Always operate on main (the deployed branch), even though the default
+      # branch that fires cron is the dev branch.
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+          fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Update prices
+        run: npm run prices
+
+      - name: Upload match report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: match-report
+          path: scripts/output/match-report.md
+          if-no-files-found: warn
+
+      - name: Commit if changed
+        id: commit
+        run: |
+          git config user.name "packet-keeper-bot"
+          git config user.email "actions@users.noreply.github.com"
+          if git diff --quiet -- recipes/; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No price/recipe changes."
+          else
+            git add recipes/
+            git commit -m "chore: daily price update $(date -u +%Y-%m-%d)"
+            # I also commit from the app on my phone — rebase before pushing.
+            for i in 1 2 3 4; do
+              git pull --rebase origin main && git push origin HEAD:main && break
+              echo "push attempt $i failed; retrying"; sleep $((2**i))
+            done
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          fi
+
+  deploy:
+    needs: update
+    if: needs.update.outputs.changed == 'true'
+    uses: ./.github/workflows/deploy.yml
+    with:
+      ref: main
+    permissions:
+      contents: read
+      pages: write
+      id-token: write

@@ -6,9 +6,23 @@
 import type { ShoppingItem, Store } from "./schema";
 import { STORES } from "./schema";
 
+export type PriceSource = "live" | "estimate" | "manual";
+
 export interface StorePrice {
-  price: number | null; // AUD; null = not stocked / unknown at this store
-  product: string; // suggested product name to buy
+  price: number | null; // AUD, normalised to the staple's pack; null = unknown
+  product: string; // product name to buy
+  // --- live-updater fields (all optional; older files won't have them) ---
+  productId?: string; // stable id so later runs price the SAME product
+  url?: string; // link to the product page
+  size?: string; // the real product size, e.g. "1kg"
+  unitPrice?: number; // store's own unit price, e.g. $/kg
+  unitMeasure?: string; // e.g. "kg", "L", "each"
+  onSpecial?: boolean;
+  wasPrice?: number; // pre-special price (normalised to pack)
+  lastChecked?: string; // ISO date of last successful live check
+  source?: PriceSource; // where this number came from
+  locked?: boolean; // true = manual override, never auto-updated
+  searchTerm?: string; // term used to find the product (editable)
 }
 export interface StapleItem {
   name: string;
@@ -17,10 +31,16 @@ export interface StapleItem {
   category?: string;
   stores: Record<Store, StorePrice>;
 }
+export interface StoreStatus {
+  ok: boolean;
+  lastSuccess?: string; // ISO date of last fully-successful run
+  error?: string;
+}
 export interface PriceBook {
   updatedAt: string;
   note?: string;
   items: Record<string, StapleItem>;
+  storeStatus?: Partial<Record<Store, StoreStatus>>;
 }
 
 function priceFor(book: PriceBook, key: string, store: Store): { item: StapleItem; sp: StorePrice } | null {
