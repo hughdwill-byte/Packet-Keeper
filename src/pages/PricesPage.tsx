@@ -33,6 +33,7 @@ export default function PricesPage() {
   const settings = useMemo(() => loadSettings(), []);
   const [book, setBook] = useState<PriceBook | null>(null);
   const [query, setQuery] = useState("");
+  const [focus, setFocus] = useState<Store | "all">(settings.preferredStore);
   const [msg, setMsg] = useState("");
   const [saving, setSaving] = useState(false);
   const [recomputing, setRecomputing] = useState("");
@@ -121,13 +122,24 @@ export default function PricesPage() {
       {msg && <p className="mb-3 rounded-lg bg-green-50 p-2 text-sm text-green-700">{msg}</p>}
       {error && <p className="mb-3 rounded-lg bg-red-50 p-2 text-sm text-red-700">{error}</p>}
 
-      <input
-        type="search"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        placeholder="Filter ingredients…"
-        className="mb-3 w-full rounded-xl border border-orange-200 bg-white px-4 py-2.5 text-base outline-none focus:border-brand-500"
-      />
+      <div className="mb-3 flex gap-2">
+        <input
+          type="search"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="Filter ingredients…"
+          className="min-w-0 flex-1 rounded-xl border border-orange-200 bg-white px-4 py-2.5 text-base outline-none focus:border-brand-500"
+        />
+        <select
+          value={focus}
+          onChange={(e) => setFocus(e.target.value as Store | "all")}
+          className="rounded-xl border border-orange-200 bg-white px-3 py-2.5 text-sm"
+          aria-label="Store to edit"
+        >
+          {STORES.map((s) => <option key={s} value={s}>{STORE_LABELS[s]}</option>)}
+          <option value="all">All stores</option>
+        </select>
+      </div>
 
       <div className="space-y-3">
         {items.map(([key, it]) => (
@@ -137,7 +149,7 @@ export default function PricesPage() {
               <span className="whitespace-nowrap text-[10px] text-stone-400">per {it.pack}{it.unit === "each" ? " ea" : it.unit}</span>
             </div>
             <div className="space-y-1.5">
-              {STORES.map((s) => {
+              {(focus === "all" ? STORES : [focus]).map((s) => {
                 const sp = it.stores[s];
                 if (!sp) return null;
                 const b = badge(sp);
@@ -150,7 +162,7 @@ export default function PricesPage() {
                         type="number" inputMode="decimal" step="0.01"
                         value={sp.price ?? ""}
                         onChange={(e) => mutate(key, s, { price: e.target.value === "" ? null : Number(e.target.value), source: "manual" })}
-                        className="w-16 rounded-md border border-orange-200 px-1.5 py-1 text-center text-xs outline-none focus:border-brand-500"
+                        className={`rounded-md border border-orange-200 text-center outline-none focus:border-brand-500 ${focus === "all" ? "w-16 px-1.5 py-1 text-xs" : "w-24 px-2 py-2 text-sm"}`}
                         placeholder="—"
                       />
                     </div>
@@ -167,9 +179,9 @@ export default function PricesPage() {
                 );
               })}
             </div>
-            {STORES.some((s) => it.stores[s]?.url) && (
+            {(focus === "all" ? STORES : [focus]).some((s) => it.stores[s]?.url) && (
               <div className="mt-1.5 space-y-0.5">
-                {STORES.map((s) => {
+                {(focus === "all" ? STORES : [focus]).map((s) => {
                   const sp = it.stores[s];
                   if (!sp?.url || !sp.product) return null;
                   return (

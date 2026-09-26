@@ -1,10 +1,11 @@
 name: Update prices
 
 on:
-  schedule:
-    # ~4:23am Melbourne. Cron is UTC; AEST=UTC+10 / AEDT=UTC+11, so this lands
-    # 4:23 (AEST) or 3:23 (AEDT). Odd minute to avoid the top-of-hour rush.
-    - cron: "23 17 * * *"
+  # Manual only. Prices are maintained by hand in the app's Prices tab (no
+  # always-on machine needed). To automate a daily run, set up a self-hosted
+  # runner (see README) and re-add:
+  #   schedule:
+  #     - cron: "23 17 * * *"   # ~4:23am Melbourne
   workflow_dispatch:
 
 # Needed to commit prices AND (via the called deploy workflow) publish Pages.
