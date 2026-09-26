@@ -7,8 +7,14 @@ let browser: Browser | null = null;
 export async function getBrowser(): Promise<Browser> {
   if (browser) return browser;
   const { chromium } = await import("playwright");
+  // Fallbacks for a stubborn home IP: PW_HEADED=1 (visible window, harder to
+  // detect) and/or PW_CHANNEL=chrome (use installed Google Chrome, not bundled
+  // Chromium). Defaults: headless bundled Chromium.
+  const headed = !!process.env.PW_HEADED && process.env.PW_HEADED !== "0";
+  const channel = process.env.PW_CHANNEL || undefined;
   browser = await chromium.launch({
-    headless: true,
+    headless: !headed,
+    channel,
     args: ["--no-sandbox", "--disable-blink-features=AutomationControlled"],
   });
   return browser;

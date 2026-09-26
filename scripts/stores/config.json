@@ -1,12 +1,25 @@
 {
-  "iga": {
-    "storeId": "melbourne-cbd",
-    "comment": "IGA is per-store. Set this to your local IGA's storefront slug/id (from igashop.com.au). Default is a Melbourne-area store."
+  "_area": "Windsor VIC 3181 (Chapel St). Verify each id from your home network via `npm run prices`; the run prints the store it actually used.",
+  "woolworths": {
+    "storeName": "Woolworths Prahran",
+    "locatorSlug": "vic-prahran-8827",
+    "storeId": "",
+    "comment": "Woolworths prices are largely national. If you want Prahran-specific pricing, set storeId to the numeric fulfilment id (the run logs the store the API returns). Leave blank for default."
+  },
+  "coles": {
+    "storeName": "Coles Prahran (Pran Central, Chapel St)",
+    "storeId": "",
+    "comment": "Coles search pricing is national; a store id is usually not needed. Leave blank unless a run shows otherwise."
   },
   "aldi": {
     "servicePoint": "G452",
     "serviceType": "walk-in",
-    "comment": "ALDI service point (store). ALDI AU only lists a limited online range; fresh produce is mostly unavailable."
+    "comment": "ALDI is national pricing; only a limited online range is listed."
+  },
+  "iga": {
+    "storeName": "IGA Local Grocer Windsor (30 Chapel St)",
+    "storeUrl": "",
+    "comment": "IGA is per-store on igashop.com.au. Open igashop.com.au, choose your Windsor store, then copy the store's shop URL (e.g. https://www.igashop.com.au/store/<slug> or the URL after selecting the store) and paste it here as storeUrl. The adapter drives that page and captures the real product API responses (no endpoint guessing)."
   },
   "politeness": {
     "minDelayMs": 1000,

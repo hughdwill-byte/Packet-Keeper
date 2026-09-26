@@ -19,7 +19,10 @@ concurrency:
 
 jobs:
   update:
-    runs-on: ubuntu-latest
+    # Runs on YOUR self-hosted runner (home/residential IP) so Coles/Woolworths
+    # aren't blocked like they are from GitHub's data-centre IPs.
+    # Setup: see README "Self-hosted runner setup". macOS/Windows/Linux all work.
+    runs-on: [self-hosted]
     outputs:
       changed: ${{ steps.commit.outputs.changed }}
     steps:
@@ -33,15 +36,18 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
 
       - run: npm ci
+        shell: bash
 
+      # No --with-deps: that's apt/Linux only. Chromium is cached after first run.
       - name: Install Playwright Chromium
-        run: npx playwright install --with-deps chromium
+        run: npx playwright install chromium
+        shell: bash
 
       - name: Update prices
         run: npm run prices
+        shell: bash
 
       - name: Upload match report
         if: always()
@@ -53,6 +59,7 @@ jobs:
 
       - name: Commit if changed
         id: commit
+        shell: bash
         run: |
           git config user.name "packet-keeper-bot"
           git config user.email "actions@users.noreply.github.com"

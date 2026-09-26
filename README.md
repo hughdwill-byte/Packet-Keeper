@@ -159,6 +159,53 @@ run lists every chosen product so you can spot mismatches.
 **Run it manually:** GitHub → **Actions → Update prices → Run workflow**. You can
 still edit prices by hand in the **Prices** tab and hit **Recompute recipe costs**.
 
+### Why it runs on a self-hosted runner
+
+GitHub's cloud runners use data-centre IPs, which **Coles (Imperva) and Woolworths
+(Akamai) block**. From a **home/residential IP** they usually don't. So the
+`update` job is set to `runs-on: [self-hosted]` — a runner you run on a machine at
+home. (The deploy job stays on GitHub's cloud; it doesn't scrape.) ALDI is national
+API pricing and works anywhere but only lists a small online range.
+
+**Test locally first** (on the machine that will host the runner, i.e. your home
+network):
+
+```bash
+npm ci
+npx playwright install chromium
+npm run prices                 # all stores; prints a per-store live/blocked table
+npm run prices -- --stores=coles,woolworths   # just the tricky two
+```
+
+Nothing is committed by the local run's git unless you commit it; `prices.json` and
+`recipes/` are updated in place so you can inspect the diff. If Coles/Woolies are
+still challenged headless, try a visible browser or your installed Chrome:
+
+```bash
+PW_HEADED=1 npm run prices -- --stores=coles,woolworths
+PW_CHANNEL=chrome npm run prices -- --stores=coles,woolworths
+```
+
+### Self-hosted runner setup
+
+1. GitHub → repo **Settings → Actions → Runners → New self-hosted runner**. Pick
+   your OS and follow the shown `download` + `./config.sh --url … --token …`
+   commands (Windows: `config.cmd`).
+2. Install it as a service so it starts on boot and runs overnight:
+   - **macOS/Linux:** `./svc.sh install && ./svc.sh start`
+   - **Windows:** choose "Run as a service" during `config.cmd`.
+3. Keep the machine **awake overnight** (macOS: `caffeinate`, or Settings → Battery
+   → prevent sleep; Windows: Power → Sleep → Never). The job runs ~4am.
+4. Ensure Node 20 is installed on that machine (the workflow uses `setup-node`,
+   which the self-hosted runner honours; otherwise install Node 20 yourself).
+5. Security (the repo is public): **Settings → Actions → General → Fork pull request
+   workflows → require approval for all outside collaborators**, and the workflow is
+   deliberately limited to `schedule` + manual `workflow_dispatch` only (never
+   `pull_request`), so no outside PR can run code on your machine.
+
+Once the runner shows **Idle** in Settings → Actions → Runners, the daily job (and
+**Run workflow**) will execute on it.
+
 ## Project layout
 
 ```

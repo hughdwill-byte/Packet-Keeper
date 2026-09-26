@@ -150,13 +150,19 @@ async function recomputeCosts(book: PriceBook) {
   console.log(`Recomputed costs for ${files.length} recipes.`);
 }
 
+function liveCount(book: PriceBook, store: Store): number {
+  return Object.values(book.items).filter((it) => it.stores[store]?.source === "live" && it.stores[store]?.lastChecked === today).length;
+}
+
 async function writeReport(book: PriceBook, statuses: Record<string, StoreStatus>) {
   await mkdir(OUT, { recursive: true });
+  const total = Object.keys(book.items).length;
   const lines: string[] = [`# Price match report — ${today}`, ""];
   lines.push("## Store status");
   for (const s of STORES) {
     const st = statuses[s] ?? book.storeStatus?.[s];
-    lines.push(`- **${s}**: ${st?.ok ? "✅ ok" : "❌ failed"}${st?.error ? ` — ${st.error}` : ""}${st?.lastSuccess ? ` (last success ${st.lastSuccess})` : ""}`);
+    const state = st?.ok ? "✅ live" : "❌ failed";
+    lines.push(`- **${s}**: ${state} — ${liveCount(book, s)}/${total} staples priced live${st?.error ? ` — ${st.error}` : ""}${st?.lastSuccess ? ` (last success ${st.lastSuccess})` : ""}`);
   }
   for (const s of STORES) {
     const rows = report.filter((r) => r.store === s);
@@ -191,6 +197,12 @@ async function main() {
 
   const attempted = STORES.filter((s) => onlyStores.includes(s));
   const anyOk = attempted.some((s) => statuses[s]?.ok);
+  const total = Object.keys(book.items).length;
+  console.log("\n=== Summary (staples priced live) ===");
+  for (const s of attempted) {
+    const st = statuses[s];
+    console.log(`  ${s.padEnd(11)} ${st?.ok ? "live" : "blocked"}  ${liveCount(book, s)}/${total}${st?.error ? `  (${st.error})` : ""}`);
+  }
   console.log(`\nDone. Stores ok: ${attempted.filter((s) => statuses[s]?.ok).join(", ") || "none"}`);
   if (!anyOk) {
     console.error("All stores failed — exiting non-zero (previous prices kept).");
