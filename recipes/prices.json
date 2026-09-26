@@ -1,6 +1,6 @@
 {
-  "updatedAt": "2026-09-18",
-  "note": "Estimated Australian supermarket prices, refreshed periodically. NOT live/scraped. ALDI & IGA figures are estimates; IGA prices vary by store.",
+  "updatedAt": "2026-09-26T01:04:02.687Z",
+  "note": "Prices auto-updated daily from live supermarket data where available; otherwise last-known/estimate. ALDI/IGA coverage is partial.",
   "items": {
     "beef_mince": {
       "name": "Beef mince",
@@ -105,8 +105,15 @@
       "category": "meat",
       "stores": {
         "aldi": {
-          "price": 12.6,
-          "product": "ALDI Raw prawns 500g"
+          "price": 13.49,
+          "product": "OCEAN ROYALE Raw Peeled Tail Off Prawns 500g",
+          "productId": "000000000000473967",
+          "url": "https://www.aldi.com.au/product/ocean-royale-raw-peeled-tail-off-prawns-500g",
+          "size": "0.5 kg",
+          "onSpecial": false,
+          "lastChecked": "2026-09-26",
+          "source": "live",
+          "searchTerm": "Raw prawns"
         },
         "coles": {
           "price": 14,
@@ -1321,6 +1328,24 @@
           "product": "Black & Gold Mingle recipe base sachet 30g"
         }
       }
+    }
+  },
+  "storeStatus": {
+    "aldi": {
+      "ok": true,
+      "lastSuccess": "2026-09-26"
+    },
+    "coles": {
+      "ok": false,
+      "error": "Coles blocked (bot challenge/captcha): homepage"
+    },
+    "woolworths": {
+      "ok": false,
+      "error": "Woolworths blocked (bot challenge/captcha): homepage"
+    },
+    "iga": {
+      "ok": false,
+      "error": "no prices returned"
     }
   }
 }

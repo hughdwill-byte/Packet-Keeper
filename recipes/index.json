@@ -18,6 +18,8 @@
       "woolworths": 27.45,
       "iga": 32.94
     },
+    "cookCount": 0,
+    "lastCooked": "",
     "ingredientNames": [
       "chicken, cauliflower or tofu, cut into chunks",
       "brown onion, diced",
@@ -58,6 +60,8 @@
       "woolworths": 16.86,
       "iga": 20.23
     },
+    "cookCount": 0,
+    "lastCooked": "",
     "ingredientNames": [
       "chicken, paneer or tofu, cut into chunks",
       "onion, diced",
@@ -94,6 +98,8 @@
       "woolworths": 14.14,
       "iga": 16.97
     },
+    "cookCount": 0,
+    "lastCooked": "",
     "ingredientNames": [
       "beef mince, chicken mince or lentils",
       "onion, diced",
@@ -130,6 +136,8 @@
       "woolworths": 14.01,
       "iga": 16.81
     },
+    "cookCount": 0,
+    "lastCooked": "",
     "ingredientNames": [
       "beef mince, pork mince or tofu",
       "cabbage, shredded",
@@ -164,6 +172,8 @@
       "woolworths": 15.26,
       "iga": 18.31
     },
+    "cookCount": 0,
+    "lastCooked": "",
     "ingredientNames": [
       "beef, chicken or tofu, sliced thinly",
       "onion, diced",
@@ -202,6 +212,8 @@
       "woolworths": 13.86,
       "iga": 16.63
     },
+    "cookCount": 0,
+    "lastCooked": "",
     "ingredientNames": [
       "chicken, beef, pork or tofu, cut into chunks",
       "onion, diced",
@@ -237,6 +249,8 @@
       "woolworths": 11.76,
       "iga": 14.11
     },
+    "cookCount": 0,
+    "lastCooked": "",
     "ingredientNames": [
       "beef mince, chicken mince or lentils",
       "onion, diced",
@@ -271,6 +285,8 @@
       "woolworths": 14.17,
       "iga": 17
     },
+    "cookCount": 0,
+    "lastCooked": "",
     "ingredientNames": [
       "beef, chicken or plant based mince alternatives (lentils work well)",
       "onion, diced",
@@ -306,6 +322,8 @@
       "woolworths": 15.69,
       "iga": 18.83
     },
+    "cookCount": 0,
+    "lastCooked": "",
     "ingredientNames": [
       "chicken, prawns or paneer, cut into chunks",
       "tomatoes, diced",
@@ -340,6 +358,8 @@
       "woolworths": 18.2,
       "iga": 21.85
     },
+    "cookCount": 0,
+    "lastCooked": "",
     "ingredientNames": [
       "beef, chicken or tofu strips",
       "onion, diced",
@@ -374,6 +394,8 @@
       "woolworths": 11.76,
       "iga": 14.11
     },
+    "cookCount": 0,
+    "lastCooked": "",
     "ingredientNames": [
       "beef mince, chicken mince or lentils",
       "onion, diced",
