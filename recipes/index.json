@@ -383,7 +383,7 @@
       "dairy"
     ],
     "dietary": [],
-    "dishImage": "recipes/images/stroganoff-dish.svg",
+    "dishImage": "recipes/images/stroganoff-cook-1790420166676.jpg",
     "needsReview": false,
     "costByStore": {
       "aldi": 12.33,
@@ -391,8 +391,8 @@
       "woolworths": 18.2,
       "iga": 21.85
     },
-    "cookCount": 0,
-    "lastCooked": "",
+    "cookCount": 1,
+    "lastCooked": "2026-09-26T10:56:06.676Z",
     "ingredientNames": [
       "beef, chicken or tofu strips",
       "onion, diced",
@@ -406,7 +406,7 @@
       "Egg noodles or bow tie pasta",
       "Chives, chopped"
     ],
-    "updatedAt": "2026-09-18T03:00:54.341Z"
+    "updatedAt": "2026-09-26T10:56:06.676Z"
   },
   {
     "slug": "taco",
