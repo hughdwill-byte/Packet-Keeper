@@ -1,0 +1,150 @@
+{
+  "dishName": "Classic Pavlova",
+  "product": "White Wings Cornflour",
+  "brand": "White Wings",
+  "cuisine": "",
+  "dishType": "Dessert",
+  "serves": "8",
+  "prepTime": "20 mins",
+  "cookTime": "2 hours (plus 2 hours cooling)",
+  "ingredientGroups": [
+    {
+      "title": "",
+      "items": [
+        {
+          "name": "egg whites",
+          "quantity": "6",
+          "note": "at room temperature"
+        },
+        {
+          "name": "caster sugar",
+          "quantity": "1½ cups",
+          "note": ""
+        },
+        {
+          "name": "White Wings Cornflour",
+          "quantity": "6 tsps",
+          "note": ""
+        },
+        {
+          "name": "white vinegar",
+          "quantity": "1 tsp",
+          "note": ""
+        }
+      ]
+    },
+    {
+      "title": "To serve",
+      "items": [
+        {
+          "name": "thickened cream, whipped",
+          "quantity": "300mL",
+          "note": ""
+        },
+        {
+          "name": "Fresh fruit of your choice",
+          "quantity": "",
+          "note": ""
+        }
+      ]
+    }
+  ],
+  "method": [
+    {
+      "text": "Preheat oven to 120°C conventional or 100°C fan-forced. Using a 20cm cake pan as a guide, draw a 20cm circle on baking paper. Place paper, pencil side down, onto a greased oven tray.",
+      "source": "packet"
+    },
+    {
+      "text": "Put egg whites and sugar into a large mixing bowl and beat with an electric mixer on low speed for 1 minute. Increase speed to high and beat for 15 minutes or until mixture is thick and glossy. Add cornflour and vinegar and beat on low speed for 1 minute longer.",
+      "source": "packet"
+    },
+    {
+      "text": "Spoon mixture onto prepared tray; spread out to a 20cm circle. Bake for 2 hours or until crisp. Turn oven off. Cool pavlova in oven with door ajar for 1-2 hours.",
+      "source": "packet"
+    },
+    {
+      "text": "Carefully transfer pavlova to a plate. Decorate as desired.",
+      "source": "packet"
+    }
+  ],
+  "nutrition": [],
+  "sachetIngredients": [],
+  "allergens": [
+    "egg"
+  ],
+  "dietary": [
+    "vegetarian",
+    "gluten-free"
+  ],
+  "shoppingList": [
+    {
+      "name": "egg whites",
+      "stapleKey": "egg",
+      "quantity": 6,
+      "unit": "each",
+      "optional": false
+    },
+    {
+      "name": "caster sugar",
+      "stapleKey": "",
+      "quantity": 375,
+      "unit": "g",
+      "optional": false
+    },
+    {
+      "name": "White Wings Cornflour",
+      "stapleKey": "",
+      "quantity": 6,
+      "unit": "each",
+      "optional": false
+    },
+    {
+      "name": "white vinegar",
+      "stapleKey": "",
+      "quantity": 5,
+      "unit": "ml",
+      "optional": false
+    },
+    {
+      "name": "thickened cream",
+      "stapleKey": "cream",
+      "quantity": 300,
+      "unit": "ml",
+      "optional": true
+    },
+    {
+      "name": "fresh fruit",
+      "stapleKey": "",
+      "quantity": 1,
+      "unit": "each",
+      "optional": true
+    }
+  ],
+  "dishPhoto": {
+    "present": true,
+    "imageIndex": 0,
+    "box": {
+      "x": 0.33,
+      "y": 0.82,
+      "w": 0.45,
+      "h": 0.13
+    }
+  },
+  "confidence": [],
+  "slug": "classic-pavlova-white-wings-cornflour",
+  "images": [
+    "recipes/images/classic-pavlova-white-wings-cornflour-1.jpg"
+  ],
+  "dishImage": "recipes/images/classic-pavlova-white-wings-cornflour-dish.jpg",
+  "dishImageFromPhoto": true,
+  "costByStore": {
+    "aldi": 0,
+    "coles": 0,
+    "woolworths": 0,
+    "iga": 0
+  },
+  "cookLog": [],
+  "needsReview": false,
+  "createdAt": "2026-09-26T10:44:51.141Z",
+  "updatedAt": "2026-09-26T10:44:51.142Z"
+}
