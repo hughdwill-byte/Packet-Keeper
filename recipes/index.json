@@ -154,6 +154,39 @@
     "updatedAt": "2026-09-18T03:00:54.343Z"
   },
   {
+    "slug": "classic-pavlova-white-wings-cornflour",
+    "dishName": "Classic Pavlova",
+    "product": "White Wings Cornflour",
+    "cuisine": "",
+    "dishType": "Dessert",
+    "allergens": [
+      "egg"
+    ],
+    "dietary": [
+      "vegetarian",
+      "gluten-free"
+    ],
+    "dishImage": "recipes/images/classic-pavlova-white-wings-cornflour-dish.jpg",
+    "needsReview": false,
+    "costByStore": {
+      "aldi": 0,
+      "coles": 0,
+      "woolworths": 0,
+      "iga": 0
+    },
+    "cookCount": 0,
+    "lastCooked": "",
+    "ingredientNames": [
+      "egg whites",
+      "caster sugar",
+      "White Wings Cornflour",
+      "white vinegar",
+      "thickened cream, whipped",
+      "Fresh fruit of your choice"
+    ],
+    "updatedAt": "2026-09-26T10:44:51.142Z"
+  },
+  {
     "slug": "fajita",
     "dishName": "Fajita",
     "product": "Fajita Recipe Base",
