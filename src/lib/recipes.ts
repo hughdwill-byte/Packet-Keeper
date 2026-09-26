@@ -33,21 +33,44 @@ function publicUrl(path: string): string {
   return `${import.meta.env.BASE_URL}${path}?t=${Date.now()}`;
 }
 
-/** Load the recipe index: static copy first, falling back to cache. */
+/**
+ * Merge the deployed index with the local cache, preferring the newer entry per
+ * slug so a just-saved recipe/cover isn't hidden by the (lagging) deployed copy.
+ * Cache-only slugs are kept only if written recently (avoids resurrecting a
+ * recipe deleted on another device).
+ */
+const RECENT_MS = 20 * 60 * 1000;
+function mergeIndex(remote: RecipeIndex, cached: RecipeIndex): RecipeIndex {
+  const bySlug = new Map(remote.map((e) => [e.slug, e]));
+  const now = Date.now();
+  for (const c of cached) {
+    const r = bySlug.get(c.slug);
+    if (r) {
+      if ((c.updatedAt || "") > (r.updatedAt || "")) bySlug.set(c.slug, c);
+    } else if (c.updatedAt && now - new Date(c.updatedAt).getTime() < RECENT_MS) {
+      bySlug.set(c.slug, c); // recently added, not yet in the deployed index
+    }
+  }
+  return [...bySlug.values()].sort((a, b) => a.dishName.localeCompare(b.dishName));
+}
+
+/** Load the recipe index: deployed copy merged with fresh local cache. */
 export async function loadIndex(): Promise<RecipeIndex> {
+  const cached = (await cacheGetIndex()) ?? [];
   try {
     const res = await fetch(publicUrl(INDEX_PATH), { cache: "no-store" });
     if (res.ok) {
       const parsed = IndexSchema.safeParse(await res.json());
       if (parsed.success) {
-        await cacheSetIndex(parsed.data);
-        return parsed.data;
+        const merged = mergeIndex(parsed.data, cached);
+        await cacheSetIndex(merged);
+        return merged;
       }
     }
   } catch {
     /* offline or not deployed yet — fall through to cache */
   }
-  return (await cacheGetIndex()) ?? [];
+  return cached;
 }
 
 /** Load one full recipe: cache, then static copy, then Contents API. */

@@ -2,7 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
 import { getRecipe, saveRecipe, deleteRecipe, type Recipe, type ImageUpload } from "../lib/recipes";
 import { deleteFile } from "../lib/github";
-import { assetUrl } from "../lib/assets";
+import { assetUrl, imgFallbackToRaw } from "../lib/assets";
 import { loadSettings, hasClaudeConfig, hasGithubConfig } from "../lib/settings";
 import { generateDishImage } from "../lib/dishImage";
 import { compressImage } from "../lib/image";
@@ -186,7 +186,7 @@ export default function RecipePage() {
     <div>
       <div className="mb-4 overflow-hidden rounded-2xl border border-orange-100 bg-white">
         {recipe.dishImage && (
-          <img src={assetUrl(recipe.dishImage)} alt={recipe.dishName} className="aspect-square w-full object-cover" />
+          <img src={assetUrl(recipe.dishImage)} alt={recipe.dishName} className="aspect-square w-full object-cover" onError={(e) => imgFallbackToRaw(e, recipe.dishImage)} />
         )}
         <div className="p-3">
           <h1 className="text-xl font-extrabold leading-tight">{recipe.dishName}</h1>
@@ -241,7 +241,7 @@ export default function RecipePage() {
                 return (
                   <div key={c.photo} className="overflow-hidden rounded-lg border border-orange-100 bg-white">
                     <a href={assetUrl(c.photo)} target="_blank" rel="noreferrer">
-                      <img src={assetUrl(c.photo)} alt={`Cooked ${new Date(c.date).toLocaleDateString()}`} className="aspect-square w-full object-cover" loading="lazy" />
+                      <img src={assetUrl(c.photo)} alt={`Cooked ${new Date(c.date).toLocaleDateString()}`} className="aspect-square w-full object-cover" loading="lazy" onError={(e) => imgFallbackToRaw(e, c.photo)} />
                     </a>
                     <div className="px-1.5 pb-1 pt-0.5">
                       <p className="truncate text-[10px] text-stone-500">{new Date(c.date).toLocaleDateString()}</p>
@@ -402,7 +402,7 @@ export default function RecipePage() {
           <div className="grid grid-cols-3 gap-2">
             {recipe.images.map((p, i) => (
               <a key={i} href={assetUrl(p)} target="_blank" rel="noreferrer">
-                <img src={assetUrl(p)} alt={`Source ${i + 1}`} className="aspect-square w-full rounded-lg object-cover" />
+                <img src={assetUrl(p)} alt={`Source ${i + 1}`} className="aspect-square w-full rounded-lg object-cover" onError={(e) => imgFallbackToRaw(e, p)} />
               </a>
             ))}
           </div>

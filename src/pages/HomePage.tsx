@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router-dom";
 import { loadIndex, searchIndex, type RecipeIndex } from "../lib/recipes";
-import { assetUrl } from "../lib/assets";
+import { assetUrl, imgFallbackToRaw } from "../lib/assets";
 import { loadSettings } from "../lib/settings";
 import { STORES, STORE_LABELS, type Store } from "../shared/schema";
 import { formatAUD } from "../shared/prices";
@@ -179,7 +179,7 @@ export default function HomePage() {
             >
               <div className="relative aspect-square w-full bg-orange-100">
                 {r.dishImage ? (
-                  <img src={assetUrl(r.dishImage)} alt={r.dishName} className="h-full w-full object-cover" loading="lazy" />
+                  <img src={assetUrl(r.dishImage)} alt={r.dishName} className="h-full w-full object-cover" loading="lazy" onError={(e) => imgFallbackToRaw(e, r.dishImage)} />
                 ) : (
                   <div className="flex h-full w-full items-center justify-center text-5xl">🍽️</div>
                 )}
