@@ -28,6 +28,9 @@ cache) and **writes** them by committing through the GitHub REST Contents API.
 - 🍽️ A dish image is generated for every recipe — a food **emoji tile** rendered as
   SVG (free, offline, no image API). See [Image generation](#image-generation).
 - 🔎 Browse a card grid, search by name or ingredient, open a detail page.
+- 🍳 **Cook journal**: tap *I cooked this* to add a meal photo. Each recipe tracks times
+  cooked, last cooked and first made. The newest cook photo becomes the cover, and the home
+  grid shows a count badge for each recipe plus your most-made dish.
 - ✏️ Edit any field, delete (with confirmation), re-run extraction or regenerate
   the image — all commit to the repo.
 
@@ -115,18 +118,25 @@ commits `./samples/`.
   used as the card image; otherwise a food‑emoji tile is used.
 - **Filters** — filter the grid by **dish type**, **cuisine**, **diet**
   (vegetarian/vegan/gluten‑free/…) and **exclude allergens**; sort A–Z or by cost.
-- **Cost estimates & shopping lists** — pick a store (**ALDI / Coles / Woolworths /
+- **Cost estimates & shopping lists**: pick a store (**ALDI / Coles / Woolworths /
   IGA**) to see an estimated **cost to make** and a **shopping list of suggested
-  products** (whole packs + a total). Costs come from `recipes/prices.json`.
+  products** (whole packs plus a total). Each item has a **check ↗** link to its live price
+  on [Trolley Checker](https://trolleychecker.com.au). Costs come from
+  `recipes/prices.json`.
 
 ### About the prices
 
-Prices live in `recipes/prices.json` and are **updated automatically every day** by
-a GitHub Actions workflow (`.github/workflows/update-prices.yml`, ~4am Melbourne).
-It can't run in the browser (CORS + supermarket bot‑protection), so it runs on
-GitHub's servers, which have open internet, and commits the results.
+Prices live in `recipes/prices.json` and are **maintained by hand in the app's Prices
+tab**. The tab focuses on your preferred store (with an *All stores* grid if you want it),
+gives you a large price input and a Trolley Checker link for each ingredient, and has a
+**Recompute recipe costs** button. Saving commits the changes through the Contents API.
 
-**How a day's run works** (`scripts/update-prices.ts`, run locally with `npm run prices`):
+An **optional automated updater** also exists (`.github/workflows/update-prices.yml`,
+manual trigger only). It can't run in the browser because of CORS and supermarket bot
+protection, so it runs on a self-hosted runner instead (see below). To schedule it daily,
+re-add the commented `schedule:` block in the workflow.
+
+**How an automated run works** (`scripts/update-prices.ts`, run locally with `npm run prices`):
 1. A per‑store adapter (`scripts/stores/{woolworths,coles,aldi,iga}.ts`) searches
    each staple, picks the best match (home brand, closest size to the staple's
    `pack`, in stock, not a multipack) and saves its `productId` so future runs
@@ -156,16 +166,15 @@ manual price so the daily run never overwrites it. `recipe_base` and unmatched
 items are left untouched. The `scripts/output/match-report.md` artifact from each
 run lists every chosen product so you can spot mismatches.
 
-**Run it manually:** GitHub → **Actions → Update prices → Run workflow**. You can
-still edit prices by hand in the **Prices** tab and hit **Recompute recipe costs**.
+**Run it manually:** GitHub → **Actions → Update prices → Run workflow**.
 
 ### Why it runs on a self-hosted runner
 
 GitHub's cloud runners use data-centre IPs, which **Coles (Imperva) and Woolworths
 (Akamai) block**. From a **home/residential IP** they usually don't. So the
-`update` job is set to `runs-on: [self-hosted]` — a runner you run on a machine at
-home. (The deploy job stays on GitHub's cloud; it doesn't scrape.) ALDI is national
-API pricing and works anywhere but only lists a small online range.
+`update` job is set to `runs-on: [self-hosted]`, which means a runner on a machine at
+home. The deploy job stays on GitHub's cloud because it doesn't scrape. ALDI has national
+API pricing that works from anywhere, but its online range is small.
 
 **Test locally first** (on the machine that will host the runner, i.e. your home
 network):
@@ -195,7 +204,7 @@ PW_CHANNEL=chrome npm run prices -- --stores=coles,woolworths
    - **macOS/Linux:** `./svc.sh install && ./svc.sh start`
    - **Windows:** choose "Run as a service" during `config.cmd`.
 3. Keep the machine **awake overnight** (macOS: `caffeinate`, or Settings → Battery
-   → prevent sleep; Windows: Power → Sleep → Never). The job runs ~4am.
+   → prevent sleep; Windows: Power → Sleep → Never) if you re-enable the ~4am schedule.
 4. Ensure Node 20 is installed on that machine (the workflow uses `setup-node`,
    which the self-hosted runner honours; otherwise install Node 20 yourself).
 5. Security (the repo is public): **Settings → Actions → General → Fork pull request
@@ -203,16 +212,18 @@ PW_CHANNEL=chrome npm run prices -- --stores=coles,woolworths
    deliberately limited to `schedule` + manual `workflow_dispatch` only (never
    `pull_request`), so no outside PR can run code on your machine.
 
-Once the runner shows **Idle** in Settings → Actions → Runners, the daily job (and
-**Run workflow**) will execute on it.
+Once the runner shows **Idle** in Settings → Actions → Runners, **Run workflow** (and the
+daily schedule, if you've re-enabled it) will execute on it.
 
 ## Project layout
 
 ```
-src/shared/    schema (zod), prompts, emoji tile, small utils  (app + script share these)
+src/shared/    schema (zod), prompts, emoji tile, small utils  (app + scripts share these)
 src/lib/       settings, github API, image compress, dish image, cache, recipes, pipeline
-src/pages/     Home, Upload, Recipe, Edit, Settings
-scripts/       import-samples.ts  (local Node import)
-recipes/       the database (JSON + images)
-.github/workflows/deploy.yml
+src/pages/     Home, Upload, Recipe, Edit, Prices, Settings
+scripts/       import-samples.ts (local sample import), update-prices.ts + stores/ (price adapters)
+recipes/       the database: recipe JSON, images, index.json, prices.json
+.github/workflows/
+  deploy.yml          build + publish to GitHub Pages on push to main
+  update-prices.yml   optional price updater (manual, self-hosted runner)
 ```
