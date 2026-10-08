@@ -352,16 +352,22 @@
   "images": [
     "recipes/images/butter-chicken-1.jpg"
   ],
-  "dishImage": "recipes/images/butter-chicken-dish.svg",
-  "dishImageFromPhoto": false,
+  "dishImage": "recipes/images/butter-chicken-cook-1791460835314.jpg",
+  "dishImageFromPhoto": true,
   "costByStore": {
     "aldi": 11.13,
     "coles": 16.86,
     "woolworths": 16.86,
     "iga": 20.23
   },
-  "cookLog": [],
+  "cookLog": [
+    {
+      "photo": "recipes/images/butter-chicken-cook-1791460835314.jpg",
+      "date": "2026-10-08T12:00:35.314Z",
+      "note": ""
+    }
+  ],
   "needsReview": false,
   "createdAt": "2026-09-17T12:31:29.744Z",
-  "updatedAt": "2026-09-18T03:00:54.348Z"
+  "updatedAt": "2026-10-08T12:00:35.314Z"
 }
