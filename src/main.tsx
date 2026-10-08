@@ -9,6 +9,7 @@ import RecipePage from "./pages/RecipePage";
 import EditPage from "./pages/EditPage";
 import SettingsPage from "./pages/SettingsPage";
 import PricesPage from "./pages/PricesPage";
+import ShopPage from "./pages/ShopPage";
 
 // Hash routing so deep links survive a page refresh on GitHub Pages.
 const router = createHashRouter([
@@ -20,6 +21,7 @@ const router = createHashRouter([
       { path: "upload", element: <UploadPage /> },
       { path: "recipe/:slug", element: <RecipePage /> },
       { path: "recipe/:slug/edit", element: <EditPage /> },
+      { path: "shop", element: <ShopPage /> },
       { path: "prices", element: <PricesPage /> },
       { path: "settings", element: <SettingsPage /> },
     ],

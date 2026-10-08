@@ -92,6 +92,25 @@ export interface ShoppingLine {
   unknown: boolean;
 }
 
+/** Price one shopping item at a store: product to buy, whole packs, line cost. */
+export function shoppingLineFor(it: ShoppingItem, book: PriceBook, store: Store): ShoppingLine {
+  const hit = it.stapleKey ? priceFor(book, it.stapleKey, store) : null;
+  if (!hit || hit.item.pack <= 0) {
+    return { name: it.name, product: "—", buyQuantity: 0, packLabel: "", lineCost: 0, optional: it.optional, unknown: true };
+  }
+  const packs = Math.max(1, Math.ceil(it.quantity / hit.item.pack));
+  const lineCost = Math.round(packs * (hit.sp.price as number) * 100) / 100;
+  return {
+    name: it.name,
+    product: hit.sp.product,
+    buyQuantity: packs,
+    packLabel: `${hit.item.pack}${hit.item.unit === "each" ? "" : hit.item.unit}`,
+    lineCost,
+    optional: it.optional,
+    unknown: false,
+  };
+}
+
 /** A concrete shopping list for one store: whole packs to buy + total spend. */
 export function buildShoppingList(
   list: ShoppingItem[],
@@ -103,31 +122,9 @@ export function buildShoppingList(
   let total = 0;
   for (const it of list) {
     if (it.optional && !opts.includeOptional) continue;
-    const hit = it.stapleKey ? priceFor(book, it.stapleKey, store) : null;
-    if (!hit || hit.item.pack <= 0) {
-      lines.push({
-        name: it.name,
-        product: "—",
-        buyQuantity: 0,
-        packLabel: "",
-        lineCost: 0,
-        optional: it.optional,
-        unknown: true,
-      });
-      continue;
-    }
-    const packs = Math.max(1, Math.ceil(it.quantity / hit.item.pack));
-    const lineCost = Math.round(packs * (hit.sp.price as number) * 100) / 100;
-    total += lineCost;
-    lines.push({
-      name: it.name,
-      product: hit.sp.product,
-      buyQuantity: packs,
-      packLabel: `${hit.item.pack}${hit.item.unit === "each" ? "" : hit.item.unit}`,
-      lineCost,
-      optional: it.optional,
-      unknown: false,
-    });
+    const line = shoppingLineFor(it, book, store);
+    total += line.lineCost;
+    lines.push(line);
   }
   return { lines, total: Math.round(total * 100) / 100 };
 }

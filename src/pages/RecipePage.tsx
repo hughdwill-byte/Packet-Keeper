@@ -12,6 +12,7 @@ import { loadPriceBook, stapleKeysOf } from "../lib/priceBook";
 import { buildShoppingList, costByStore as computeCostByStore, formatAUD, type PriceBook } from "../shared/prices";
 import { STORES, STORE_LABELS, type Store, type CookEntry } from "../shared/schema";
 import { trolleySearchUrl, relativeDate } from "../shared/util";
+import { loadSession, saveSession } from "../lib/shop";
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -410,6 +411,17 @@ export default function RecipePage() {
       )}
 
       <div className="mt-6 space-y-2">
+        <button
+          onClick={() => {
+            const s = loadSession(store);
+            s.slugs[recipe.slug] = s.slugs[recipe.slug] || 1;
+            saveSession(s);
+            navigate("/shop");
+          }}
+          className="w-full rounded-xl bg-green-600 py-3 text-center font-semibold text-white"
+        >
+          🧺 Add to shopping list
+        </button>
         <div className="flex gap-2">
           <Link to={`/recipe/${recipe.slug}/edit`} className="flex-1 rounded-xl bg-brand-600 py-3 text-center font-semibold text-white">Edit</Link>
           <button onClick={regenerateImage} disabled={!canWrite || !!busy} className="flex-1 rounded-xl border border-brand-300 py-3 font-semibold text-brand-700 disabled:opacity-40">Emoji image</button>
