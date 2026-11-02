@@ -348,16 +348,22 @@
   "images": [
     "recipes/images/sri-lankan-curry-1.jpg"
   ],
-  "dishImage": "recipes/images/sri-lankan-curry-dish.svg",
-  "dishImageFromPhoto": false,
+  "dishImage": "recipes/images/sri-lankan-curry-cook-1793621520537.jpg",
+  "dishImageFromPhoto": true,
   "costByStore": {
     "aldi": 10.07,
     "coles": 15.69,
     "woolworths": 15.69,
     "iga": 18.83
   },
-  "cookLog": [],
+  "cookLog": [
+    {
+      "photo": "recipes/images/sri-lankan-curry-cook-1793621520537.jpg",
+      "date": "2026-11-02T12:12:00.537Z",
+      "note": ""
+    }
+  ],
   "needsReview": false,
   "createdAt": "2026-09-17T12:18:21.026Z",
-  "updatedAt": "2026-09-18T03:00:54.346Z"
+  "updatedAt": "2026-11-02T12:12:00.537Z"
 }
