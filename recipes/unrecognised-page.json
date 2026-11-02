@@ -1,0 +1,39 @@
+{
+  "dishName": "Unrecognised page",
+  "product": "",
+  "brand": "",
+  "cuisine": "",
+  "dishType": "",
+  "serves": "",
+  "prepTime": "",
+  "cookTime": "",
+  "ingredientGroups": [],
+  "method": [],
+  "nutrition": [],
+  "sachetIngredients": [],
+  "allergens": [],
+  "dietary": [],
+  "shoppingList": [],
+  "confidence": [
+    {
+      "field": "all",
+      "note": "No recipe was detected on this page."
+    }
+  ],
+  "slug": "unrecognised-page",
+  "images": [
+    "recipes/images/unrecognised-page-1.jpg"
+  ],
+  "dishImage": "recipes/images/unrecognised-page-dish.svg",
+  "dishImageFromPhoto": false,
+  "costByStore": {
+    "aldi": 0,
+    "coles": 0,
+    "woolworths": 0,
+    "iga": 0
+  },
+  "cookLog": [],
+  "needsReview": true,
+  "createdAt": "2026-11-02T12:11:14.895Z",
+  "updatedAt": "2026-11-02T12:11:14.897Z"
+}
